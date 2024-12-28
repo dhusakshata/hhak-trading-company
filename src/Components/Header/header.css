@@ -1,0 +1,161 @@
+/* Main Header Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Apply Poppins font globally */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between; /* Position logo and contact info on opposite sides */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #004225;
+  color: white;
+  flex-wrap: wrap; /* Allow wrapping of elements on smaller screens */
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px; /* Adjust logo size */
+}
+
+/* Contact Information Styling */
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-info span {
+  color: white; /* White color for text */
+  font-size: 14px;
+}
+
+.email-button {
+  text-decoration: none;
+  color: white;
+  margin-left: 5px;
+  padding: 2px;
+  border: 2px solid transparent;
+  border-radius: 4px; /* Optional, to make the edges rounded */
+  transition: all 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.email-button:hover {
+  color:#ffdf00 ; /* Change text color to yellow */
+}
+
+/* Styling for the download button */
+.download-btn {
+  display: inline-block; /* Ensure the button behaves as a block-level element */
+  background-color: white; /* Dark Green background */
+  color:black; /* White text */
+  padding: 8px 16px; /* Add padding for better button size */
+  font-size: 14px; /* Text size */
+  font-weight: bold; /* Make the text bold */
+  border: 2px solid #004225; /* Border with the same color as background */
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  visibility: visible; /* Ensure it's always visible */
+  opacity: 1; /* Ensure it is fully opaque */
+  text-align: center; /* Center align the text */
+}
+
+/* Hover effect */
+.download-btn:hover {
+  background-color:#ffdf00  !important; /* Change background color on hover */
+  color:black; /* Change text color to match background */
+  border-color: #004225; /* Ensure border matches text color */
+  cursor: pointer; /* Pointer cursor to indicate it's clickable */
+}
+
+/* Fix for the download link inside the button */
+.download-btn a {
+  color: inherit; /* Inherit the color from the button */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Ensure the link takes up the full button space */
+  width: 100%; /* Make link fill the button */
+  height: 100%; /* Ensure the link takes the full height of the button */
+  padding: 0; /* Remove padding from link */
+}
+
+.download-btn a:hover {
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color:#ffdf00 ;
+  border-top: 2px solid #fff; /* White border on top */
+}
+
+.navbar-nav .nav-link {
+  color: black; /* Black text for nav links */
+  font-weight: bold; /* Bold nav links */
+  text-transform: uppercase; /* Uppercase text for a more professional look */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #1d5c34; /* Darker green on hover */
+  color: white;
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* White color for the hamburger icon */
+}
+
+/* Media Query for Smaller Screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  /* Adjust layout to stack elements vertically on smaller screens */
+  .main-header {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px 15px; /* Adjust padding for mobile */
+  }
+
+  /* Adjust logo size for mobile */
+  .logo-img {
+    height: 40px; /* Resize logo on mobile */
+  }
+
+  /* Stack contact info vertically */
+  .contact-info {
+    width: 100%; /* Make contact info take full width */
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Add space between items */
+    justify-content: flex-start; /* Align items to the left */
+    margin-top: 10px; /* Add some space at the top */
+  }
+
+  /* Adjust font size for mobile devices */
+  .contact-info span, .email-button {
+    font-size: 12px; /* Smaller font size on mobile */
+  }
+
+  /* Adjust download button size */
+  .download-btn {
+    font-size: 12px; /* Smaller button text */
+    padding: 6px 12px; /* Adjust button size */
+  }
+
+  /* Navbar adjustments for mobile */
+  .navbar {
+    padding: 5px; /* Add padding for better spacing on mobile */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 12px; /* Smaller font size for nav links */
+    padding: 8px; /* Adjust padding for nav links */
+  }
+
+  .navbar-toggler-icon {
+    background-color: #004225; /* Match the navbar background */
+  }
+}
