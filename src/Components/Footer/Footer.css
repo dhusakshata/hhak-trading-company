@@ -1,0 +1,66 @@
+/* src/css/footer.css */
+
+/* Footer Section Styling */
+.footer-section {
+  background-color:#d66b4b  ; 
+  color: black; /* White text */
+  padding: 30px 0;
+}
+
+/* Footer Columns */
+.footer-col h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  color: black;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 5px 0;
+}
+
+.footer-col ul li a {
+ color: black;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: #006400  ; /* Change color on hover */
+}
+
+/* Social Media Links */
+.social-media {
+  margin-top: 10px;
+  color: black;
+}
+
+.social-icon {
+  margin-right: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #006400  ; /* Change color on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
