@@ -1,8 +1,11 @@
-// src/components/Footer.js
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap'; // For layout
-import { Link } from 'react-router-dom'; // For navigation
+import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Footer.css';
+
+// Import React Icons
+import { FaPhoneAlt, FaEnvelope, FaTwitter, FaLinkedin, FaMapMarkerAlt, FaHome, FaInfo, FaShoppingCart, FaAddressBook, FaLink,FaUserCircle } from 'react-icons/fa';
+
 
 const Footer = () => {
   return (
@@ -10,44 +13,86 @@ const Footer = () => {
       <Container>
         <Row>
           <Col md={4} className="footer-col">
-            <h5>Quick Links</h5>
+            <h5><FaLink className="icon" />Quick Links</h5>
             <ul>
-              <li><Link to="/">Home</Link></li>
+              <li><Link to="/"> Home</Link></li>
               <li><Link to="/about-us">About Us</Link></li>
-              <li><Link to="/products">Products</Link></li>
+              <li><Link to="/products"> Products</Link></li>
               <li><Link to="/contact-us">Contact Us</Link></li>
             </ul>
-          </Col>
-          <Col md={4} className="footer-col">
-            <h5>Contact Us</h5>
-            <p>Email: info@hhaktrading.com</p>
-            <p>Phone: +123 456 7890</p>
             <div className="social-media">
-              {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">Facebook</a> */}
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">Twitter</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">LinkedIn</a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <FaTwitter className="social-icons" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <FaLinkedin className="social-icons" />
+              </a>
             </div>
           </Col>
-
-          {/* Map Section */}
           <Col md={4} className="footer-col">
-            <h5>Find Us</h5>
+            <h5>   <FaUserCircle className="icon" /> Contact Us</h5>
+            <div className="contact-address">
+            <div className="address-item">
+        <h5> REG. OFFICE: 
+         </h5>
+        <p>
+          Plot No. 11A/1, Gate No. 120,<br />
+          Village Karodi, Bombay Highway,<br />
+          Tq. Dist. Aurangabad – 431136.
+        </p>
+       
+      </div>
+
+      <div className="address-item">
+        <h5> WAREHOUSE:</h5>
+        <p>
+          Plot No. 1, Gate No.48, Near Bharat<br />
+          Weight Bridge, Talawade-Chikhali<br />
+          Road, Talawade, Pune – 411062.
+        </p>
+        
+      </div>
+  <div className="Contact-info">
+  <a href="tel:+91 9922058133" className="Contact-item">
+    <FaPhoneAlt className="icon" /> +91 9922058133
+  </a>
+  <a href="mailto:info.hhak@gmail.com" className="Contact-item">
+    <FaEnvelope className="icon" /> info.hhak@gmail.com
+  </a>
+</div>
+
+</div>
+
+           
+            
+          </Col>
+          <Col md={4} className="footer-col">
+            <h5>Find HHAK Trading Company Here. . . .</h5>
             <div className="map-container">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.146983604372!2d144.963158!3d-37.813629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d456f2f3d2f%3A0x5045675218ce6e0!2sFederation%20Square!5e0!3m2!1sen!2sus!4v1638237391583!5m2!1sen!2sus"
-                width="100%" 
-                height="200" 
-                style={{ border: 0 }} 
-                allowFullScreen="" 
-                loading="lazy">
-              </iframe>
+           
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3408509795686!2d75.97098997960751!3d22.900795525780854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396268404cba037f%3A0xbebb1b188659a18!2sMumbai%20-%20Agra%20Rd!5e0!3m2!1sen!2sin!4v1735894501229!5m2!1sen!2sin"
+            title="Register Office Map"
+            loading="lazy"
+            style={{ border: '0', width: '100%', height: '100%' }}
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+           <iframe
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3779.8547318425663!2d73.79609847489597!3d18.670513664577477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPlot%20No.1%2CGat%20No.48%2C%20Near%20Bharat%20Weight%20Bridge%2C%20Talawade-Chikhali%20Road%2CTalwade%2C%20Pune%20-%20411%20062!5e0!3m2!1sen!2sin!4v1735808820617!5m2!1sen!2sin"
+            title="Warehouse Map"
+            loading="lazy"
+            style={{ border: '0', width: '100%', height: '100%' }}
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
             </div>
           </Col>
         </Row>
 
         <Row className="footer-bottom">
           <Col className="text-center">
-            <p>&copy; {new Date().getFullYear()} HHAK Trading Machine. All rights reserved.</p>
+            <p style={{textAlign:"center",color:"white"}}>&copy; {new Date().getFullYear()}  HHAK – All rights reserved | Designed By <a href="https://bitshine.in/" className="bitshine-link" target="_blank" rel="noopener noreferrer">Bitshine Infotech</a></p> 
           </Col>
         </Row>
       </Container>

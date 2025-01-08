@@ -1,0 +1,135 @@
+
+
+/* Overall container */
+.product-page-container {
+
+  margin: 0;
+  padding: 0;
+ }
+ 
+ /* Page title */
+ .page-title  {
+   font-size: 2.5rem;
+   font-weight: bold;
+   color:black;
+   text-align: center;
+  text-transform: uppercase;
+ }
+ 
+ /* Layout */
+ .product-page {
+   display: flex;
+   gap: 40px;
+   margin: 10px;
+   padding: 20px;
+ }
+ 
+ /* Left menu styling */
+ 
+ .product-menu {
+   width: 350px;
+   height: 300px;
+   padding: 10px;
+   margin-top: 10px;
+   margin-left: 20px;
+   background:radial-gradient(circle, #ffe9d8, #bc865a) !important; 
+   border: 1px solid #ddd;
+ }
+ 
+ .product-menu h4 {
+   text-align: center;
+   font-size: 18px;
+   font-weight: bold;
+   color: black; 
+ }
+ 
+ .product-menu ul {
+   list-style-type: none;
+   margin: 20px;
+ }
+ 
+ .product-menu ul li {
+   align-items: center;
+   justify-content: center;
+   font-size: 16px;
+ text-align: left;
+   font-weight: bold;
+ 
+   color: #000; /* Black text */
+ }
+ 
+ .product-menu ul li::before {
+   content: " +   ";
+   font-weight: bold;
+ }
+ 
+ .product-menu ul li a {
+   text-decoration: none;
+   color: inherit;
+   transition: color 0.3s ease;
+ }
+ 
+ .product-menu ul li a:hover {
+   color: #043870; 
+ }
+ 
+ 
+ /* Right product list styling */
+ .product-list {
+   flex: 3;
+ 
+ }
+ 
+ .product-list h4 {
+   font-size: 18px;
+   font-weight: bold;
+   margin-bottom: 20px;
+   border-bottom: 1px solid #bc865a;
+  
+ }
+ 
+ /* Product grid with dynamic layout */
+ .product-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px;
+ }
+ 
+ 
+ /* Product card styling */
+ .Product-card {
+   text-align: center;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   padding: 10px;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s;
+   background-color: #fff;
+   box-shadow: 0 4px 8px #004226 (0.1, 0.1, 0.1, 0.5);
+   border-radius: 8px;
+   overflow: hidden;
+   transition: transform 0.3s ease;
+   cursor: pointer;
+   text-decoration: none;
+   border: 1px solid rgb(167, 167, 167) ;
+   text-align: center;
+ }
+ 
+ .product-card img {
+   width: 100%;
+   height: 150px;
+   object-fit: contain;
+   margin-bottom: 10px;
+ }
+ 
+ .product-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+ }
+ 
+ .product-name {
+   font-size: 16px;
+   font-weight: bold;
+   color: #333;
+ }
+ 

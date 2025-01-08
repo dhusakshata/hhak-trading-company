@@ -1,12 +1,54 @@
-import React from "react";
-
-const Boltformer = () => {
+// VTCuttingMachinePage.js
+import React from 'react';
+import './ProductPage.css';
+import productImage from '../../Images/vt-cut/die-cutting-machine-vt-series.png';
+import Breadcrumb from "../BreadCrumbs/Breadcrumbs.js";
+const VTCuttingMachinePage = () => {
   return (
-    <div className="product-page">
-      <h1>Product 7</h1>
-      <p>This is the detailed page for Product 1. Include all relevant product details here.</p>
+    <div
+      className="subproduct-page-container"
+     
+    >
+      <Breadcrumb currentPage="VT Cut Machine" isSubProduct={true} />
+
+      <div className="subproduct-title-container">
+        <h1 className="subproduct-title">VT Cut Machine</h1>
+      </div>
+
+      <div className="subproduct-content"   style={{
+     padding:"40px"
+        
+        }}>
+        <div className="subproduct-details">
+          <p className="subproduct-description">
+            A VT Cut Machine is a specialized cutting machine designed for precise and efficient cutting of materials, often used in manufacturing and fabrication industries. It is typically associated with processes requiring high accuracy, such as metal cutting, sheet processing, or component shaping.
+          </p>
+          <div className="subproduct-features">
+            <h2>Key Features</h2>
+            <ul>
+              <li><strong>High Precision:</strong> Ensures clean and accurate cuts for complex designs.</li>
+              <li><strong>Versatile Material Handling:</strong> Suitable for cutting metals, plastics, or other materials depending on the application.</li>
+              <li><strong>Advanced Cutting Technology:</strong> Includes methods like laser, plasma, or mechanical cutting.</li>
+              <li><strong>Programmable Operation:</strong> Often CNC-controlled for automation and repeatability.</li>
+            </ul>
+          </div>
+          <div className="subproduct-applications">
+            <h2>Applications</h2>
+            <p>
+              Commonly used in industries such as automotive, aerospace, fabrication, and construction for precise cutting of metal and other materials for complex parts and components.
+            </p>
+          </div>
+        </div>
+
+        <img src={productImage} alt="VT Cut Machine" className="subproduct-image"  style={{
+          width: '100%',
+          height: '500px',
+          objectFit: 'contain',
+        marginTop:"-80px"
+        
+        }}  />
+      </div>
     </div>
   );
 };
-
-export default Boltformer;
+export default VTCuttingMachinePage;

@@ -1,171 +1,483 @@
-/* Home Container Styling */
-body{
-  margin: 0px;
-}
-.home-container {
+/* Hero Section Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-  background-color: #f8f9fa;
-}
-.homes{
-  height: 80vh;
-}
-/* Left Section Styling */
-.left-section {
- 
-
-  height: 80vh;
-  position: relative;
- 
-}
-
-/* Styling the product slider */
-.product-slider {
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  padding-right: 50px;
-  box-sizing: border-box;
-}
-
-
-.slider-card {
-  width: 200px; 
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px; 
-  border-radius: 8px;
-  margin: 20px 0;  
-  height: auto;
-  box-sizing: border-box; 
-}
-
-/* Vertically positioning the slick dots */
-.slick-dots {
-  position: absolute;
-  top: 0;
-  right: -80px; 
-  transform: rotate(90deg);
-  list-style: none;
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  padding: 0;
+.home-section {
   margin: 0;
-}
-
-.slick-dots li {
-  margin-bottom: 10px; 
-}
-
-.slick-dots li button:before {
-  font-size: 12px;
-  color: #004225; /* Dot color */
-}
-
-.slick-dots li.slick-active button:before {
-  color: #002d18; /* Active dot color */
-}
-
-/* Styling for the product image */
-.product-image {
-  width: 200px;
+  padding: 0;
+  box-sizing: border-box;
  
-  object-fit: cover;
-  margin: 0 auto; /* Centers the image horizontally */
-  display: block; /* Ensures image is a block-level element for centering */
-  /* If you want to also vertically center the image, you can add padding/margin */
-  margin-bottom: 10px; /* Space below image */
+}
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px;
+  background:radial-gradient(circle, #dddbdb, #464545) !important; 
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+  
+ 
 }
 
-.get-quote-btn {
-  background-color: #FFA500;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+/* Left Section */
+.left-content {
+  flex: 1;
+  margin-right: 40px;
 }
 
-.get-quote-btn:hover {
-  background-color: #FF7F00;
+.feature-circle {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+  margin-bottom: 40px;
 }
 
-/* Modal Styling */
-.product-modal-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+.circle-item {
+  width: 180px; 
+  height: 180px; 
+  background: radial-gradient(circle, #edecec, #bcbbbb);
+  border: 1px solid gray;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color:black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  animation: rotateCircle 5s linear infinite;
 }
-
-.triangular-section {
-  padding: 40px;
-  background: #f5f5f5;
+/* Revolving animation */
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.circle-item p{
+  
+  font-size: 16px;
+  padding: 10px;
   text-align: center;
 }
 
-.about-section {
-  padding: 20px;
+.circle-item:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
+  background: radial-gradient(circle, #d9d9d9, #949393); 
+  border: 1px solid rgb(44, 43, 43);
+  color:bl;
 }
 
-.additional-info {
-  padding: 20px;
+.text-content {
+  overflow: hidden;
 }
-
-/* Right Section Styling */
-.right-section {
-  padding: 20px; /* Added padding */
+.text-content h2,
+.text-content h3 {
+  position: relative; 
+  opacity: 0; 
  
-  
 }
-
-.right-section h2 {
-  margin-bottom: 15px;
-  color: #004225;
-}
-
-.right-section h3 {
+.text-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
   margin-bottom: 10px;
-  color: #004225;
-}
-
-.right-section p,
-.right-section ul {
-  color: #333;
-}
-
-.right-section ul {
+  animation: slideInLeft 1s ease-out forwards;
   margin-left: 20px;
 }
 
-.right-section ul li {
-  margin-bottom: 10px;
-}
-.triangular-section {
-  position: relative;
-  background-color: #369889;
-  color: white;
-  text-align: center;
-  padding: 40px ;
-  margin-bottom: 20px;
-
- 
-  clip-path: polygon(50% 30%, 100% 10%, 100% 100%, 0% 100%, 0% 10%);
-}
-
-.triangular-section h4 {
-  font-size: 24px;
+.text-content h3 {
+  font-size: 2.5rem;
   font-weight: bold;
-
-  margin: 20px;
+  color:white;
+  line-height: 1.5;
+  text-decoration: solid;
+  animation: slideInRight 1s ease-out forwards; /* Animation for h3 */
+  animation-delay: 0.5s; 
+  margin-left: 80px;
+  font-style: italic;
 }
 
-.triangular-section p {
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%); /* Start off-screen */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* End in original position */
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%); 
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* End in original position */
+    opacity: 1;
+  }
+}
+
+/* Right Section */
+.right-content {
+  flex: 1;
+  position: relative;
+  display: block; 
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  display: block; /* Ensure slideshow is visible */
+  visibility: visible; /* Make sure it's not hidden */
+  
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+  z-index: 2;
+}
+.slide.next {
+  opacity: 0.5; 
+  z-index: 1; 
+}
+/* First image (1st child) */
+.slideshow img:nth-child(1) {
+  object-fit: contain;
+  width: 100%;
+  max-width: 700px !important;
+  height: 450px !important;
+  margin-top: -30px;
+}
+
+/* Second image (2nd child) */
+.slideshow img:nth-child(2) {
+  object-fit: contain;
+  width: 100%;
+  max-width: 700px !important;
+  height: 420px !important;
+ 
+}
+
+/* Third image (3rd child) */
+.slideshow img:nth-child(3) {
+  object-fit: contain;
+  width: 90%;
+}
+
+/* Add more styles for other nth-child as needed */
+.slideshow img:nth-child(4) {
+  object-fit: contain;
+  width: 100%;
+  max-width: 700px !important;
+  height: 420px !important;
+}
+.slideshow img:nth-child(5) {
+  object-fit: contain;
+  width: 100%;
+  max-width: 700px !important;
+  height: 420px !important;
+}
+.slideshow img:nth-child(6) {
+  object-fit: contain;
+  width: 100%;
+  max-width: 700px !important;
+  height: 420px !important;
+}
+
+.slideshow img:nth-child(7) {
+  object-fit: contain;
+ 
+  width: 900px !important;
+  height: 600px !important;
+  margin-top: -100px !important;
+  margin-left: -50px !important;
+}
+.slideshow img:nth-child(8) {
+  object-fit: contain;
+  width: 100%;
+  max-width: 700px !important;
+  height: 420px !important;
+}
+
+/* About Section */
+.triangle-div {
+  /* background-color: #bc865a; */
+  background:radial-gradient(circle, #ffe9d8, #bc865a) !important; 
+
+}
+
+.about-us-section {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 50px; 
+  background: #f9f9f9; 
+  position: relative;
+  clip-path: polygon(0% 0%, 75% 10%, 100% 150%, 0% 100%, 0% 0%); 
+}
+
+.about-us-section h2 {
+
+  font-size: 2rem; 
+  color: black ; /* Dark color */
+  font-weight: bold;
+  padding: 10px;
+  margin-top: -50px;
+  margin-left: 40px;
+ 
+}
+.about-para{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: 700px;
+margin-left: 40px;
+
+}
+
+.about-us-section p {
   font-size: 16px;
+  color: black;
+  line-height: 1.6; 
+  margin-bottom: 20px; 
+  text-align: justify; 
+}
+/* Apply initial blur and reduced opacity to the paragraph */
+.about-para p {
+  filter: blur(4px); /* Initial blur effect */
+  opacity: 0.7; /* Slight visibility */
+  transition: filter 1s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+/* Remove blur and make text fully visible on hover */
+.triangle-div:hover .about-para p {
+  filter: blur(0); /* Remove blur */
+  opacity: 1; /* Fully visible */
+}
+.about-us-section hr {
+  width: 50%; 
+  border: none; 
+  height: 3px;
+  background-color: #bc865a;
+  margin: 0;
+}
+/* Container for positioning */
+.square-button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 40px;
+}
+
+/* Square Button Style */
+.square-button {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  color:white;
+background-color: #004226;
+  border: 2px solid #004226;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.square-button:hover {
+  background-color:#bc865a;
+  color:black;
+  transform: scale(1.1); /* Slightly enlarges the button on hover */
+}
+
+/* Product Section */
+/* 
+.Product-section {
+background-color:whitesmoke;
+ 
+}
+
+.Product-section h2 {
+  font-size: 2.5rem;
+  color:black; 
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  text-transform: uppercase;
+}
+
+.Product-section hr {
+  width: 50%; 
+  border: none; 
+  height: 3px;
+  background-color: #004226 ;
   margin: 0;
 }
 
+.product-item {
+  text-align: center;
+ 
+  border-radius: 10px;
+  padding: 0 50px ;
+  gap: 40px;
+}
 
+.product-item img {
+  background-color: whitesmoke;
+  max-width: 100%;
+  height: 400px;
+  padding: 0 20px;
+
+
+}
+
+.product-item img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-description h4 {
+  font-size: 1.2em;
+  color:black;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.product-button {
+  background-color: #bc865a;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-button:hover {
+  background-color: #a05d4a;
+} */
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .about-us-section {
+    padding: 30px 20px;
+  }
+
+  .about-us-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-us-section p {
+    font-size: 16px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-section {
+    padding: 40px; 
+  }
+
+  .about-us-section h2 {
+    font-size: 1.5rem; /* Smaller heading size */
+  }
+
+  .about-us-section p {
+    font-size: 16px;
+    
+  }
+}
+
+
+
+
+/* Media Query for Screens Smaller than 768px */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; 
+    padding: 30px;
+  }
+
+  .left-content,
+  .right-content {
+    width: 100%; /* Make both sections take full width */
+    margin: 0 auto;
+  }
+  .circle-item {
+    width: 120px; /* Reduce width */
+    height: 120px; /* Reduce height */
+    border-radius: 50%; /* Maintain circular shape */
+  }
+  .slideshow {
+    width: 100%;
+    height: 400px !important; /* Adjust height dynamically */
+    margin-top: 20px; /* Add some spacing between sections */
+  }
+
+  .slide {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: none;
+    opacity: 0; 
+  }
+
+}
+
+/* Media Query for Screens Smaller than 480px */
+@media (max-width: 480px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .left-content {
+    margin-bottom: 20px; /* Add space between left and right content */
+  }
+  .circle-item {
+    width: 100px; /* Adjust width for very small screens */
+    height: 100px; 
+    border-radius: 50%; 
+    font-size: 14px;
+  }
+  .slideshow {
+    width: 100%;
+    height: 400px !important; /* Adjust height dynamically */
+    margin-top: 20px; /* Add some spacing between sections */
+  }
+
+  .slide {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: none;
+    opacity: 0; 
+  }
+}

@@ -13,6 +13,7 @@ body {
   top: 0;
   z-index: 10000;
   width: 100%;
+
 }
 
 .main-header {
@@ -45,6 +46,10 @@ body {
   gap: 20px;
   flex-wrap: wrap;
 }
+.contact-info i {
+  margin-right: 8px;
+  color:black;
+}
 
 .contact-info span {
   color: black; 
@@ -61,45 +66,41 @@ body {
 }
 
 .email-button:hover {
-  color: #FFA500; /* Change text color to yellow */
+  color:#d66b4b ; /* Change text color to yellow */
 }
 
 /* Styling for the download button */
 .download-btn {
   display: inline-block;
-  background-color:  #d66b4b!important;
-  color: white;
+  background-color: white !important;
+  color: black !important;
   padding: 8px 16px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
-
+  border: 2px solid  #095d40  !important;
   border-radius: 5px;
   transition: all 0.3s ease;
   visibility: visible;
   opacity: 1;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .download-btn:hover {
-  background-color:#369889!important; 
+  background-color: #095d40  !important; 
   color:white !important; 
-
+  transform: scale(1.1); 
   cursor: pointer; 
 }
-.download-link{
-  text-decoration: none;
-  color: black;
-}
-.download-link :hover{
- 
-  color: white !important;
+.download-link:hover{
+  color:white !important;
 }
 
 
 /* Navbar Styling */
 .navbar {
-  background-color: #369889;
-  border-top: 2px solid #fff; /* White border on top */
+  background-color: #095d40  ;
+  border-top: 2px solid #fff; 
   position: sticky !important;
   z-index: 9999999;
   width: 100%;
@@ -107,27 +108,31 @@ body {
 display: flex;
 align-items: center;
 justify-content: center;
+  border-bottom: 1px solid white;
 }
+
 
 /* Center navbar items */
 .navbar-nav {
   display: flex;
-  justify-content: center; /* Center the items */
-  width: 100%; /* Ensure it takes full width */
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+  gap:20px;
 }
 
 /* Navbar Links Styling */
 .navbar-nav .nav-link {
-  color: black; /* Black text for nav links */
-  font-weight: bold; /* Bold nav links */
-  text-transform: uppercase; /* Uppercase text for a more professional look */
-  padding: 10px 20px; /* Add padding for spacing between items */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase; 
+  padding: 10px 20px;
+ 
 }
 
 /* Hover Effect */
 .navbar-nav .nav-link:hover {
-  background-color: #FFA500; /* Orange background on hover */
-  color: white;
+   color: black;
 }
 
 /* Responsive Design: Center navbar items on smaller screens */
@@ -142,16 +147,57 @@ justify-content: center;
   }
 }
 
+.products-items:hover{
+  position: relative;
+ 
+}
 
-/* Fix for the dropdown menu */
-#dropdown-menu {
-  z-index: 999999;
+.products-link {
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  color: #000;
+}
+
+
+
+.dropdown-menu {
+  display: none;
   position: absolute;
   top: 100%;
-  left: 0;
-  width: auto;
-  visibility: visible;
-  transform: translateY(0);
+  left:0;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100000;
+  min-width: 250px;
+  text-align: justify;
+ 
+ 
+}
+
+.products-items:hover .dropdown-menu {
+  display: block;
+  color: #095d40  !important;
+}
+
+
+/* General dropdown item styling */
+.dropdown-item {
+  padding: 20px 15px; /* Adjust padding for better spacing */
+  text-decoration: none;
+  color:black !important; /* Default text color */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  border-radius: 5px; /* Add rounded corners */
+
+}
+
+/* Hover effect */
+.dropdown-item:hover {
+  background:#095d40 ; /* Hover background color */; /* Soft gradient background */
+  color: white !important; /* Change text color on hover */
+  transform: scale(1.03); /* Slightly enlarge the item on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
 }
 
 
@@ -201,35 +247,74 @@ justify-content: center;
   }
 }
 
-/* General Styling for Other Elements */
-.search-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-
+/* Container for the search bar */
 .search-bar {
-  position: absolute;
-  right: 0;
-  top: 40px;
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 25px;
   display: flex;
   align-items: center;
-  padding: 5px 10px;
-  width: 300px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-  z-index: 9999;
+  position: relative;
+  
 }
 
-.search-bar.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+/* Styling for the search input */
+.search-bar input {
+  display: block;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  margin-right: 10px;
+  width: 250px;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+/* Styling for the search icon when input is closed */
+.search-icon {
+
+  font-size: 20px;
+  color:white !important;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for the search icon */
+.search-icon:hover {
+  color:black !important ;
+}
+
+/* Search button inside the input box */
+.search-bar button {
+  padding: 5px 10px;
+  border: none;
+  background-color:#bc865a;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+/* Hover effect for the search button */
+.search-bar button:hover {
+  background-color:#bc865a ;
+}
+
+/* Disabled state for search input */
+.search-bar input:disabled {
+  pointer-events: none;
+
+}
+
+/* Style for search icon when input is open */
+
+.search-bar input:focus {
+  background-color: white;
+  border-color:#bc865a ;
+}
+ button{
+  background-color:#bc865a ;
+    padding: 5px 10px;
+  color: white !important;
 }

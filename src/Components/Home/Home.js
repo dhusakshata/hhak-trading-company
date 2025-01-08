@@ -1,170 +1,148 @@
 
-import React, { useState } from 'react';
-import Slider from 'react-slick';
+import React, { useState, useEffect } from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Container, Row, Col, Modal, Button, Form } from 'react-bootstrap';
+
 import './home.css';
+import ProductSection from "./Product-Section";
+
+import ProductSection2 from "./Productsection2.js";
+import { Link } from "react-router-dom";
+
 
 // Import images from the src/assets/images folder
-import product1 from '../../Images/bolt-former/bolt-making-machine-1.avif';
-import product2 from '../../Images/header-machine/header-machine.jpg';
-import product3 from '../../Images/nut-former/nut-former-machine.webp';
-import product4 from '../../Images/part-former/partformer1.webp';
-import product5 from '../../Images/sloting-machine/SLOTTING-MACHINE.png';
-import product6 from '../../Images/thread-rolling-machine/thread-rolling-machine-.jpg';
-import product7 from '../../Images/vt-cut/die-cutting-machine-vt-series.jpg';
-import product8 from '../../Images/washer-assembly/self-drilling-screw-washer-assembly-machine.jpg';
-
+import product1 from '../../Images/bolt-former/bold-machine-removebg-preview(2).png';
+import product2 from '../../Images/header-machine/automatic-heavy-duty-screw-header-machine-removebg-preview(1).png';
+import product3 from '../../Images/nut-former/nut-former-machine-removebg-preview.png';
+import product4 from '../../Images/part-former/partformer1-removebg-preview.png';
+import product5 from '../../Images/sloting-machine/high-grade-10-inch-slotting-machine-removebg-preview(1).png';
+import product6 from '../../Images/thread-rolling-machine/thread-rolling2.png';
+import product7 from '../../Images/img-removebg-preview.png';
+import product8 from '../../Images/washer-assembly/self-drilling-screw-washer-assembly-machine.png';
 
 const Home = () => {
-  const products = [
-    { id: 1, image: product1, name: 'Product 1', description: 'This is a high-quality product 1 description.' ,style: { border: '2px solid red', borderRadius: '10px', height: '400px', width: '300px' }  },
-    { id: 2, image: product2, name: 'Product 2', description: 'This is a high-quality product 2 description.',style: { border: '2px solid red', borderRadius: '10px', height: '200px', width: '300px' }},
-    { id: 3, image: product3, name: 'Product 3', description: 'This is a high-quality product 3 description.',style: { border: '2px solid red', borderRadius: '10px', height: '200px', width: '300px' } },
-    { id: 4, image: product4, name: 'Product 4', description: 'This is a high-quality product 4 description.',style: { border: '2px solid red', borderRadius: '10px', height: '200px', width: '300px' } },
-    { id: 5, image: product5, name: 'Product 5', description: 'This is a high-quality product 5 description.',style: { border: '2px solid red', borderRadius: '10px', height: '200px', width: '300px' } },
-    { id: 6, image: product6, name: 'Product 6', description: 'This is a high-quality product 6 description.',style: { border: '2px solid red', borderRadius: '10px', height: '200px', width: '300px' } },
-    { id: 7, image: product7, name: 'Product 7', price: '$400', description: 'This is a high-quality product 7 description.',style: { border: '2px solid red', borderRadius: '10px', height: '200px', width: '300px' } },
-    { id: 8, image: product8, name: 'Product 8', price: '$450', description: 'This is a high-quality product 8 description.',style: { border: '2px solid red', borderRadius: '10px', height: '200px', width: '300px' } },
-  ];
 
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-    vertical: true,
-    verticalSwiping: true,
-  };
+  // Hero Section Slider show 
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const images = [product1, product2, product3, product4, product5, product6, product7, product8];
 
-  const [showModal, setShowModal] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [phoneNumber, setPhoneNumber] = useState('');
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+    }, 3000);
 
-  const handleGetBestQuote = (product) => {
-    setSelectedProduct(product);
-    setShowModal(true);
-  };
+    return () => clearInterval(slideInterval);
+  }, [images.length]);
 
-  const handleClose = () => {
-    setShowModal(false);
-    setSelectedProduct(null);
-    setPhoneNumber('');
-  };
 
-  const handleSubmit = () => {
-    alert(`Request sent for ${selectedProduct.name} with phone number: ${phoneNumber}`);
-    handleClose();
-  };
+  // // Product Section
+  // const productDescriptions = [
+  //   "Bolt Making Machine",
+  //   "Automatic Heavy Duty Screw Header Machine",
+  //   "Self Drilling Screw Washer Assembly Machine",
+  //   "Flat Die Thread Rolling Machine",
+  //   "High Grade Slotting Machine",
+  //   "Precision Screw Machine",
+  //   "Advanced Forged Machine",
+  //   "Thread Rolling Machine"
+  // ];
+
+  // const sliderSettings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1200,
+  //       settings: { slidesToShow: 3 },
+  //     },
+  //     {
+  //       breakpoint: 992,
+  //       settings: { slidesToShow: 2 },
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: { slidesToShow: 1 },
+  //     },
+  //   ],
+  // };
 
   return (
-    <Container fluid className="home-container">
-      <Row className="homes">
-        {/* Left Section: Product Slider with 8 cards */}
-        <Col md={6} className="left-section">
-          <Slider {...sliderSettings} className="product-slider">
-            {products.map((product) => (
-              <div key={product.id} className="slider-card">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  style={product.style} 
-                  className="product-image"
-                />
-                <p>{product.description}</p>
-             
-                <button
-                  className="get-quote-btn"
-                  onClick={() => handleGetBestQuote(product)}>
-                  Get Best Quote
-                </button>
-              </div>
-            ))}
-          </Slider>
-        </Col>
+    <div className="Home section">
+      <div className="hero-section">
+        {/* Left Section */}
+        <div className="left-content">
+          <div className="feature-circle">
+            <div className="circle-item"><p>Quality <br /> Products</p></div>
+            <div className="circle-item"><p>Advanced<br /> Forged</p></div>
+            <div className="circle-item"><p>Specialized <br />Screws</p></div>
+          </div>
+          <div className="text-content">
+            <h2>Future of Fastener Manufacturing is Here</h2>
+            <h3>Driving Innovation in Sustainable Fastener Manufacturing</h3>
+          </div>
+        </div>
 
-        {/* Right Section: About and Additional Info */}
-        <Col md={6} className="right-section">
-          <div className="about-section">
-            <h2>About Us</h2>
+        {/* Right Section */}
+        <div className="right-content">
+          <div className="slideshow">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Slide ${index}`}
+                className={`slide ${currentSlide === index ? "active" : ""}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      {/* About Us Section */}
+      <div className="triangle-div">
+        <div className="about-us-section">
+          <h2>ABOUT US <hr /></h2>
+          <div className="about-para">
             <p>
-              We are HHAK Trading Machine, providing high-quality industrial
-              equipment and exceptional customer service. Explore our wide
-              range of products tailored to meet your business needs.
+              <h5 style={{ color: "#bc865a", fontWeight: "bold" }}><i>Trusted Fastener Machine Experts with a Commitment to Quality and Precision!</i></h5>
+              Fastener Trading Solutions is a vital area of expertise at <b><i>HHAK Trading Company</i></b>, where we specialize in supplying a comprehensive range of premium-quality fasteners to meet the diverse needs of industries worldwide. As trusted dealers, we offer an extensive inventory of bolts, nuts, screws, washers, rivets, and other essential fastener components, ensuring our clients have access to the best solutions for their specific requirements.
+            </p>
+            <p>
+            Whether you are initiating a new project, maintaining existing operations, or replenishing your inventory, our commitment to quality and reliability remains steadfast. We source fasteners from reputable manufacturers globally, ensuring durability, precision, and performance in every product. Additionally, we pride ourselves on providing timely deliveries, competitive pricing, and exceptional customer service to support your business goals effectively. With <b><i>HHAK Trading Company</i></b>, you can rest assured that your fastener needs are in expert hands, enabling your operations to run smoothly and efficiently.  
             </p>
           </div>
-          <div className="additional-info">
-            <h3>Why Choose Us?</h3>
-            <ul>
-              <li>High-quality products</li>
-              <li>Competitive pricing</li>
-              <li>Excellent customer support</li>
-            </ul>
-          </div>
-        </Col>
-      </Row>
-
-      {/* Triangular Curve Section */}
-      <Row>
-        <div className="triangular-section">
-          <h4>Experience Excellence</h4>
-          <p>
-            With years of experience and a commitment to innovation, we ensure
-            that every product meets the highest standards of quality. Our
-            customer-first approach drives us to exceed expectations.
-          </p>
-          <p>
-            Contact us today to discover how we can help you achieve your
-            business goals with reliable and efficient industrial solutions.
-          </p>
+          <div className="square-button-container">
+      <Link to="/about-us" className="square-button">
+      More Details...
+      </Link>
+    </div>
         </div>
-      </Row>
+      </div>
+      
+      {/* Product Section */}
+      {/* <div className="Product-section">
+        <h2>PRODUCTS <hr /></h2>
+        <Slider {...sliderSettings}>
+          {images.map((image, index) => (
+            <div className="product-item" key={index}>
+               <img src={image} alt={productDescriptions[index]} />
+              <div className="product-description">
+            
+                <h4>{productDescriptions[index]}</h4>
+              
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div> */}
+<ProductSection/>
 
-      {/* Modal for Product Details */}
-      {selectedProduct && (
-        <Modal show={showModal} onHide={handleClose} centered>
-          <Modal.Header closeButton>
-            <Modal.Title>{selectedProduct.name}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Row>
-              <Col md={6}>
-                <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                  className="product-modal-image"
-                />
-                <h4>{selectedProduct.name}</h4>
-                <p>{selectedProduct.description}</p>
-                <h5>Price: {selectedProduct.price}</h5>
-              </Col>
-              <Col md={6}>
-                <h5>Request Best Quote</h5>
-                <Form>
-                  <Form.Group controlId="formPhoneNumber">
-                    <Form.Label>Phone Number</Form.Label>
-                    <Form.Control
-                      type="text"
-                      placeholder="Enter your phone number"
-                      value={phoneNumber}
-                      onChange={(e) => setPhoneNumber(e.target.value)}
-                    />
-                  </Form.Group>
-                  <Button variant="primary" onClick={handleSubmit}>
-                    Submit Now
-                  </Button>
-                </Form>
-              </Col>
-            </Row>
-          </Modal.Body>
-        </Modal>
-      )}
-    </Container>
+    </div>
   );
 };
 

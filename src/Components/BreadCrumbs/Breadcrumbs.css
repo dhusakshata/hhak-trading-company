@@ -1,0 +1,28 @@
+/* Breadcrumb Container */
+.breadcrumb {
+  font-size: 0.9rem;
+ 
+  padding: 10px 20px;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Link Styling */
+.breadcrumb-link {
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  color: #555 !important;
+}
+
+/* Separator */
+.breadcrumb-separator {
+  color: #888;
+  margin: 0 5px;
+}
+
+/* Current Page */
+.breadcrumb-current {
+  color: #333;
+  font-weight: bold;
+}
