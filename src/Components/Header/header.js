@@ -1,142 +1,4 @@
 
-// import React, { useState } from "react";
-// import { Navbar, Nav, Container, Button, Form  } from 'react-bootstrap';
-// import { Link , useNavigate } from 'react-router-dom'; // For navigation
-// import './header.css';
-// import '@fortawesome/fontawesome-free/css/all.min.css';
-
-// import brochure from "../../pdf/brocher.pdf";
-
-// const NavigationBar = () => {
-  
-
-//   //for search bar->
-//   const [searchOpen, setSearchOpen] = useState(false); // For toggling search input
-//   const [searchQuery, setSearchQuery] = useState(""); // To hold search input value
-//   const navigate = useNavigate(); // React Router's navigation hook
-//   const handleSearchIconClick = () => {
-//     setSearchOpen((prevState) => !prevState); // Toggle search input visibility
-//   };
-
-//   const handleSearchSubmit = (e) => {
-//     e.preventDefault(); // Prevent page reload
-//     if (searchQuery.trim()) {
-//       navigate(`/search?query=${searchQuery}`); // Navigate to the search results page with query
-//       setSearchQuery(""); // Clear search input
-//       setSearchOpen(false); // Close the search input
-//     }
-//   };
-
-
-// //  for Dropdowns->
-// const [dropdownOpen, setDropdownOpen] = useState(false);
-//   const toggleDropdown = () => {
-//     setDropdownOpen(prevState => !prevState); // Toggle dropdown state
-//   };
-
-//   const closeDropdown = () => {
-//     setDropdownOpen(false); 
-//   };
-
-//   const handleMouseEnter = () => {
-//     setDropdownOpen(true); // Open dropdown on hover
-//   };
-
-//   const handleMouseLeave = () => {
-//     setDropdownOpen(false); // Close dropdown on hover out
-//   };
-
-//   return (
-//     <div className="header-section">
-//       {/* Main Header Section */}
-//       <div className="main-header">
-//         {/* Left: Logo */}
-//         <div className="logo">
-//           <img src="/path-to-logo.png" alt="HHAK Trading Machine" className="logo-img" />
-//         </div>
-//         {/* Right: Contact Info and Download Option */}
-//         <div className="contact-info">
-//           <a href="mailto:sheetalrubber@gmail.com" className="email-button">
-//             <i className="fas fa-envelope"></i> info.hhak@gmail.com
-//           </a>
-//           <span className="phone">
-//             <i className="fas fa-phone"></i> +91 9922058133
-//           </span>
-//           <Button className="download-btn">
-//             <a href={brochure} download="HHAK_Trading.pdf" className="download-link">
-//               <i className="fas fa-download"></i> Download Brochure
-//             </a>
-//           </Button>
-//           <Button className="download-btn exibhision">
-//           EXHIBITIONS 
-//           </Button>
-//         </div>
-//       </div>
-
-//       {/* Navbar Section */}
-//       <Navbar expand="lg" className="navbar-custom">
-//         <Container>
-//           <Navbar.Toggle aria-controls="navbar-nav" />
-//           <Navbar.Collapse id="navbar-nav">
-//             <Nav className="ms-auto">
-//               <Nav.Link as={Link} to="/">Home</Nav.Link>
-//               <Nav.Link as={Link} to="/about-us">About Us</Nav.Link>
-
-//               <nav
-//                 className="products-items"
-//                 style={{ display: "flex", position: "relative" }}
-//                 onMouseEnter={handleMouseEnter}
-//                 onMouseLeave={handleMouseLeave}
-//               >
-//                 <Nav.Link
-//                   as={Link}
-//                   to="/Products"
-//                   className="products-link"
-//                   onClick={toggleDropdown} // Toggle dropdown on click
-//                 >
-//                   Products
-//                 </Nav.Link>
-//                 {(dropdownOpen || false) && (
-//                   <div className="dropdown-menu">
-//                     <Nav.Link as={Link} to="/Bolt-former" className="dropdown-item" onClick={closeDropdown}>
-//                       Bolt Former
-//                     </Nav.Link>
-//                     <Nav.Link as={Link} to="/Header-Machine" className="dropdown-item" onClick={closeDropdown}>
-//                       Header Machine
-//                     </Nav.Link>
-//                     <Nav.Link as={Link} to="/Nut-former" className="dropdown-item" onClick={closeDropdown}>
-//                       Nut Former
-//                     </Nav.Link>
-//                     <Nav.Link as={Link} to="/Part-former" className="dropdown-item" onClick={closeDropdown}>
-//                       Part Former
-//                     </Nav.Link>
-//                     <Nav.Link as={Link} to="/Slotting-machine" className="dropdown-item" onClick={closeDropdown}>
-//                       Slotting Machine
-//                     </Nav.Link>
-//                     <Nav.Link as={Link} to="/Threat-rolling-machine" className="dropdown-item" onClick={closeDropdown}>
-//                       Thread Rolling Machine
-//                     </Nav.Link>
-//                     <Nav.Link as={Link} to="/VT-cut-machine" className="dropdown-item" onClick={closeDropdown}>
-//                       VT Cut Machine
-//                     </Nav.Link>
-//                     <Nav.Link as={Link} to="/Washer-Assembly" className="dropdown-item" onClick={closeDropdown}>
-//                       Washer Assembly
-//                     </Nav.Link>
-//                   </div>
-//                 )}
-//               </nav>
-
-//               <Nav.Link as={Link} to="/contact-us">Contact Us</Nav.Link>
-              
-//             </Nav>
-//           </Navbar.Collapse>
-//         </Container>
-//       </Navbar>
-//     </div>
-//   );
-// };
-
-// export default NavigationBar;
 
 import React, { useState, useRef } from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
@@ -253,7 +115,7 @@ const NavigationBar = () => {
       </div>
 
       {/* Navbar Section */}
-      <Navbar expand="lg" className="navbar-custom">
+      <Navbar expand="lg"className="navbar-custom">
         <Container>
           <Navbar.Toggle aria-controls="navbar-nav" />
           <Navbar.Collapse id="navbar-nav">
@@ -280,14 +142,14 @@ const NavigationBar = () => {
                     <Nav.Link as={Link} to="/Bolt-former" className="dropdown-item" onClick={closeDropdown}>
                       Bolt Former
                     </Nav.Link>
-                    <Nav.Link as={Link} to="/Header-Machine" className="dropdown-item" onClick={closeDropdown}>
-                      Header Machine
-                    </Nav.Link>
                     <Nav.Link as={Link} to="/Nut-former" className="dropdown-item" onClick={closeDropdown}>
                       Nut Former
                     </Nav.Link>
                     <Nav.Link as={Link} to="/Part-former" className="dropdown-item" onClick={closeDropdown}>
                       Part Former
+                    </Nav.Link>
+                    <Nav.Link as={Link} to="/Header-Machine" className="dropdown-item" onClick={closeDropdown}>
+                      Header Machine
                     </Nav.Link>
                     <Nav.Link as={Link} to="/Slotting-machine" className="dropdown-item" onClick={closeDropdown}>
                       Slotting Machine
@@ -296,7 +158,7 @@ const NavigationBar = () => {
                       Thread Rolling Machine
                     </Nav.Link>
                     <Nav.Link as={Link} to="/VT-cut-machine" className="dropdown-item" onClick={closeDropdown}>
-                      VT Cut Machine
+                      BT Cut Machine
                     </Nav.Link>
                     <Nav.Link as={Link} to="/Washer-Assembly" className="dropdown-item" onClick={closeDropdown}>
                       Washer Assembly

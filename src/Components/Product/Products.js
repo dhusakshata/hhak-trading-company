@@ -21,23 +21,24 @@ const products = [
     image: image1,
     link: "/bolt-former",
   },
+ 
   {
     id: 2,
-    name: "Header Machine",
-    image: image2,
-    link: "/header-machine",
-  },
-  {
-    id: 3,
     name: "Nut Former",
     image: image3,
     link: "/nut-former",
   },
   {
-    id: 4,
+    id: 3,
     name: "Part Former",
     image: image4,
     link: "/part-former",
+  },
+  {
+    id: 4,
+    name: "Header Machine",
+    image: image2,
+    link: "/header-machine",
   },
   {
     id: 5,
@@ -53,7 +54,7 @@ const products = [
   },
   {
     id: 7,
-    name: "VT Cutting Machine",
+    name: "BT Cutting Machine",
     image: image7,
     link: "/vt-cutting-machine",
   },
@@ -79,14 +80,15 @@ const ProductPage = () => {
               <li>
                 <Link to="/bolt-former">Bolt Former</Link>
               </li>
-              <li>
-                <Link to="/header-machine">Header Machine</Link>
-              </li>
+             
               <li>
                 <Link to="/nut-former">Nut Former</Link>
               </li>
               <li>
                 <Link to="/part-former">Part Former</Link>
+              </li>
+              <li>
+                <Link to="/header-machine">Header Machine</Link>
               </li>
               <li>
                 <Link to="/slotting-machine">Slotting Machine</Link>
@@ -95,7 +97,7 @@ const ProductPage = () => {
                 <Link to="/thread-rolling-machine">Thread Rolling Machine</Link>
               </li>
               <li>
-                <Link to="/vt-cutting-machine">VT Cutting Machine</Link>
+                <Link to="/vt-cutting-machine">BT Cutting Machine</Link>
               </li>
               <li>
                 <Link to="/washer-assembly-machine">Washer Assembly Machine</Link>
@@ -115,7 +117,7 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-      <ProductSection2/>
+      {/* <ProductSection2/> */}
     </>
   );
 };

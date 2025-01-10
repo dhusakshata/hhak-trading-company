@@ -3,6 +3,7 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
+  position: relative; /* Ensure it can contain pseudo-elements */
 }
 
 .subproduct-page-container::before {
@@ -17,11 +18,10 @@
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.4;
-  z-index: -4;
+  z-index: -1; 
   margin: 0;
   padding: 0;
-}
-
+} 
 
 /* Title Section */
 .subproduct-title-container {
@@ -34,65 +34,68 @@
   font-weight: bold;
   color: black;
   text-transform: uppercase;
+  margin-left: 20px; /* Add margin for proper alignment */
 }
-
 
 /* Content Section */
 .subproduct-content {
-  width: 1400px;
   display: flex;
-  flex-direction: row;
-  align-items:center;
-  justify-content:space-between;
-  gap: 60px;
-  margin-left: 50px;
-  margin-top: -40px;
-  padding: 60px;
-  flex-wrap: wrap; 
-  
+  flex-direction: row; /* Row layout for larger screens */
+  align-items: flex-start; /* Align content to the left */
+  gap: 30px;
+  margin-left: 20px;
+  margin-right: 20px; /* Ensure there's a margin on both sides */
+  padding: 30px;
+  color: white;
+  flex-wrap: wrap; /* Allow content to wrap for smaller screens */
 }
 
 .subproduct-details {
-  flex: 2; 
-  max-width: 900px ; 
-  color:black;
+  max-width: 60%; /* Adjust content width */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7); 
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative; 
+  z-index: 1; 
 }
 
 .subproduct-description {
   font-size: 16px;
-font-weight: 600;
+  font-weight: 600;
+  color: white;
 }
-
 
 .subproduct-features h2 {
   font-size: 18px;
-color: black;
+  color: white;
   font-weight: bold;
 }
 
 .subproduct-features ul {
   list-style-type: disc;
   padding-left: 20px;
-  color: black;
+  color: white;
   font-weight: 600;
 }
 
 .subproduct-features ul li {
   font-size: 16px;
-  color: black;
+  color: white;
   font-weight: 600;
 }
 
 /* Applications Section */
 .subproduct-applications h2 {
   font-size: 18px;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
 .subproduct-applications p {
   font-size: 16px;
-  color: black;
+  color: white;
   font-weight: 600 !important;
 }
 
@@ -100,31 +103,34 @@ color: black;
 .subproduct-image {
   width: 100%;
   max-width: 500px;
-  height: auto; 
+  height: auto;
   border-radius: 10px;
-  flex-shrink: 0; 
+  flex-shrink: 0;
   object-fit: contain;
-  visibility: visible; 
+  visibility: visible;
+  margin-top: 20px; /* Add margin above the image */
+  align-self: center; /* Center the image */
+  margin-left: 20px;
 }
-/* Responsive Design (Only for smaller screens) */
-@media (max-width: 768px) {
-  .subproduct-content {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
 
-  .subproduct-image {
-    max-width: 100%;  
-    height: auto; 
+/* Responsive Design (For smaller screens) */
+@media (max-width: 1024px) {
+  /* Tablet and smaller screens */
+  .subproduct-content {
+    flex-direction: column; /* Switch to column layout for smaller screens */
+    padding: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    gap: 20px;
   }
 
   .subproduct-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-align: center !important;
   }
 
   .subproduct-details {
-    padding: 20px;
+    padding: 15px;
     max-width: 100%;
   }
 
@@ -136,7 +142,87 @@ color: black;
   .subproduct-applications h2 {
     font-size: 16px;
   }
+
+  .subproduct-image {
+    max-width: 90%;
+  }
 }
 
+/* Responsive Design for Smaller Mobile Screens */
+@media (max-width: 768px) {
+  /* For mobile phones */
+  .subproduct-title {
+    font-size: 2.5rem;
+    text-align: center !important;
+  }
 
+  .subproduct-content {
+    flex-direction: column; /* Ensure column layout on mobile */
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 15px;
+  }
 
+  .subproduct-details {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .subproduct-description {
+    font-size: 16px;
+  }
+
+  .subproduct-features h2,
+  .subproduct-applications h2 {
+    font-size: 18px;
+  }
+
+  .subproduct-image {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* Responsive Design for Extra Small Mobile Screens */
+@media (max-width: 480px) {
+  /* For small mobile phones */
+  .subproduct-title {
+    font-size: 2.5rem;
+    text-align: center !important;
+  }
+
+  .subproduct-content {
+    padding: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    gap: 12px;
+  }
+
+  .subproduct-details {
+    padding: 8px;
+    max-width: 100%;
+  }
+
+  .subproduct-description {
+    font-size: 16px;
+  }
+
+  .subproduct-features h2,
+  .subproduct-applications h2 {
+    font-size: 18px;
+  }
+
+  .subproduct-image {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* For Full-screen background image */
+@media (max-width: 768px) {
+  .subproduct-page-container::before {
+    background-size: cover; /* Ensures the background still covers the entire screen */
+    background-position: center center; /* Keeps it centered */
+  }
+}

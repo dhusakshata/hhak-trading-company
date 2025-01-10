@@ -5,6 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import './home.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import ProductSection from "./Product-Section";
 
 import ProductSection2 from "./Productsection2.js";
@@ -22,6 +25,13 @@ import product7 from '../../Images/img-removebg-preview.png';
 import product8 from '../../Images/washer-assembly/self-drilling-screw-washer-assembly-machine.png';
 
 const Home = () => {
+  // Annimation Aos->
+  useEffect(() => {
+    AOS.init({
+      duration: 3000, // Animation duration in milliseconds
+      once: true,     // Ensure the animation happens only once
+    });
+  }, []);//<-
 
   // Hero Section Slider show 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -74,6 +84,7 @@ const Home = () => {
 
   return (
     <div className="Home section">
+      <ProductSection2/>
       <div className="hero-section">
         {/* Left Section */}
         <div className="left-content">
@@ -105,15 +116,15 @@ const Home = () => {
       
       {/* About Us Section */}
       <div className="triangle-div">
-        <div className="about-us-section">
+        <div className="about-us-section" data-aos="flip-left">
           <h2>ABOUT US <hr /></h2>
           <div className="about-para">
             <p>
               <h5 style={{ color: "#bc865a", fontWeight: "bold" }}><i>Trusted Fastener Machine Experts with a Commitment to Quality and Precision!</i></h5>
-              Fastener Trading Solutions is a vital area of expertise at <b><i>HHAK Trading Company</i></b>, where we specialize in supplying a comprehensive range of premium-quality fasteners to meet the diverse needs of industries worldwide. As trusted dealers, we offer an extensive inventory of bolts, nuts, screws, washers, rivets, and other essential fastener components, ensuring our clients have access to the best solutions for their specific requirements.
+              Fastener Trading Solutions is a key expertise area of <b><i>HHAK Trading Company</i></b>, specializing in supplying a comprehensive range of premium-quality fastener-making machines to meet diverse industrial needs. As trusted dealers, we source machines from reputable global manufacturers, ensuring durability, precision, and high performance. Whether you are starting a new project, maintaining operations, or replenishing inventory, our commitment to quality, timely delivery, competitive pricing, and exceptional customer service ensures your business goals are supported effectively. With HHAK Trading Company, you can rely on expert solutions to keep your operations running smoothly and efficiently.
             </p>
             <p>
-            Whether you are initiating a new project, maintaining existing operations, or replenishing your inventory, our commitment to quality and reliability remains steadfast. We source fasteners from reputable manufacturers globally, ensuring durability, precision, and performance in every product. Additionally, we pride ourselves on providing timely deliveries, competitive pricing, and exceptional customer service to support your business goals effectively. With <b><i>HHAK Trading Company</i></b>, you can rest assured that your fastener needs are in expert hands, enabling your operations to run smoothly and efficiently.  
+            Alpine Tool Tech, a unit of <b><i>HHAK Trading Company</i></b>, is dedicated to producing top-grade carbide and steel tools designed for the cold forging sector. Emphasizing accuracy and long-lasting performance, the company addresses diverse industrial requirements, offering dependable solutions for even the most challenging applications. 
             </p>
           </div>
           <div className="square-button-container">
@@ -140,7 +151,7 @@ const Home = () => {
           ))}
         </Slider>
       </div> */}
-<ProductSection/>
+<ProductSection />
 
     </div>
   );

@@ -40,11 +40,7 @@ const products = [
     images: [product1Img1, product1Img2, product1Img3,product1Img4],
     link: '/Bolt-former', 
   },
-  {
-    name: 'Header Machine',
-    images: [product2Img1, product2Img2,product2Img3],
-    link: '/Header-Machine', 
-  },
+ 
   {
     name: 'Nut Former',
     images: [product3Img1, product3Img2],
@@ -57,7 +53,11 @@ const products = [
     
     link: '/Part-former', 
   },
- 
+  {
+    name: 'Header Machine',
+    images: [product2Img1, product2Img2,product2Img3],
+    link: '/Header-Machine', 
+  },
   {
     name: 'Slotting Machine',
     images: [product5Img1, product5Img2, product5Img3],
@@ -71,7 +71,7 @@ const products = [
     link: '/Threat-rolling-machine',
   },
   {
-    name: 'VT Cutting Machine',
+    name: 'BT Cutting Machine',
     images: [product7Img1],
     link: '/VT-cut-machine',
   },
@@ -114,8 +114,8 @@ const ProductSection = () => {
   };
 
   return (
-    <section className="product-section">
-      <h2>Our Products <hr /></h2>
+    <section className="product-section ">
+      <h2 style={{color:"white"}}>Our Products <hr /></h2>
       
       <div className="product-cards">
         {products.map((product, index) => (

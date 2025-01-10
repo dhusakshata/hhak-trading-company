@@ -1,10 +1,17 @@
 // WasherAssemblyPage.js
-import React from 'react';
-import './ProductPage.css';
+import React, { useEffect } from 'react';import './ProductPage.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import productImage from '../../Images/washer-assembly/washer-assembly1.png';
 import Breadcrumb from "../BreadCrumbs/Breadcrumbs.js";
 
 const WasherAssemblyPage = () => {
+   useEffect(() => {
+      AOS.init({
+        duration: 2000, 
+        once: true,     
+      });
+    }, []);
   return (
     <div
       className="subproduct-page-container"
@@ -22,12 +29,22 @@ const WasherAssemblyPage = () => {
              
              }}
       >
-        <div className="subproduct-details">
+         <img src={productImage} alt="Washer Assembly Machine" className="subproduct-image" 
+         style={{
+          width: '100%',
+          height: '450px',
+          objectFit: 'contain',
+        marginTop:"-20px"
+        
+        }} 
+         data-aos="zoom-in"
+        />
+        <div className="subproduct-details"data-aos="fade-up">
           <p className="subproduct-description">
             A washer assembly machine is a specialized automated system designed to assemble washers onto bolts, screws, or other components. It streamlines the process of combining these parts, ensuring precision and high production efficiency.
           </p>
           <div className="subproduct-features">
-            <h2>Key Features</h2>
+            <h2>Key Features:</h2>
             <ul>
               <li><strong>Automation:</strong> Handles the assembly process without manual intervention.</li>
               <li><strong>High Speed:</strong> Assembles large quantities of washers efficiently.</li>
@@ -36,22 +53,14 @@ const WasherAssemblyPage = () => {
             </ul>
           </div>
           <div className="subproduct-applications">
-            <h2>Applications</h2>
+            <h2>Applications:</h2>
             <p>
               Commonly used in industries like automotive, electronics, construction, and machinery. Washer assembly machines are essential for efficiently assembling washers onto fasteners like bolts and screws in high volumes.
             </p>
           </div>
         </div>
 
-        <img src={productImage} alt="Washer Assembly Machine" className="subproduct-image" 
-         style={{
-          width: '100%',
-          height: '450px',
-          objectFit: 'contain',
-        marginTop:"-20px"
-        
-        }} 
-        />
+       
       </div>
     </div>
   );

@@ -4,8 +4,8 @@
 /* Apply Poppins font globally */
 body {
   font-family: 'Poppins', sans-serif;
-  margin: 0; /* Remove default margin to avoid overflow */
-  padding: 0; /* Remove default padding */
+  margin: 0; 
+  padding: 0;
 }
 
 .header-section {
@@ -66,7 +66,7 @@ body {
 }
 
 .email-button:hover {
-  color:#d66b4b ; /* Change text color to yellow */
+  color: #bc865a ; 
 }
 
 /* Styling for the download button */
@@ -105,20 +105,27 @@ body {
   z-index: 9999999;
   width: 100%;
   box-sizing: border-box;
-display: flex;
+  display: flex;
 align-items: center;
 justify-content: center;
   border-bottom: 1px solid white;
 }
 
+/* Target the hamburger menu icon */
+.navbar-toggler-icon {
+  background-color:white; 
+}
+
+
 
 /* Center navbar items */
 .navbar-nav {
   display: flex;
-  justify-content: center; 
+  justify-content:center; 
   align-items: center;
   width: 100%;
   gap:20px;
+
 }
 
 /* Navbar Links Styling */
@@ -127,6 +134,7 @@ justify-content: center;
   font-weight: bold;
   text-transform: uppercase; 
   padding: 10px 20px;
+
  
 }
 
@@ -210,23 +218,23 @@ justify-content: center;
   }
 
   .main-header {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align items to the left */
-    padding: 10px 15px; /* Adjust padding for mobile */
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 10px 15px; 
   }
 
   /* Adjust logo size for mobile */
   .logo-img {
-    height: 40px; /* Resize logo on mobile */
+    height: 40px; 
   }
 
   /* Stack contact info vertically */
   .contact-info {
-    width: 100%; /* Make contact info take full width */
-    flex-direction: column; /* Stack items vertically */
-    gap: 10px; /* Add space between items */
-    justify-content: flex-start; /* Align items to the left */
-    margin-top: 10px; /* Add some space at the top */
+    width: 100%; 
+    flex-direction: column; 
+    gap: 10px;
+    justify-content: flex-start; 
+    margin-top: 10px; 
   }
 
   /* Adjust font size for mobile devices */
@@ -257,6 +265,7 @@ justify-content: center;
 
 /* Styling for the search input */
 .search-bar input {
+  
   display: block;
   padding: 8px 10px;
   border: 1px solid #ccc;

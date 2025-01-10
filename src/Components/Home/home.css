@@ -245,7 +245,7 @@
   color: black ; /* Dark color */
   font-weight: bold;
   padding: 10px;
-  margin-top: -50px;
+  margin-top: -25px;
   margin-left: 40px;
  
 }
@@ -267,18 +267,7 @@ margin-left: 40px;
   margin-bottom: 20px; 
   text-align: justify; 
 }
-/* Apply initial blur and reduced opacity to the paragraph */
-.about-para p {
-  filter: blur(4px); /* Initial blur effect */
-  opacity: 0.7; /* Slight visibility */
-  transition: filter 1s ease, opacity 0.5s ease; /* Smooth transition */
-}
 
-/* Remove blur and make text fully visible on hover */
-.triangle-div:hover .about-para p {
-  filter: blur(0); /* Remove blur */
-  opacity: 1; /* Fully visible */
-}
 .about-us-section hr {
   width: 50%; 
   border: none; 
@@ -296,6 +285,7 @@ margin-left: 40px;
 
 /* Square Button Style */
 .square-button {
+
   width: 150px;
   height: 40px;
   display: flex;
@@ -314,7 +304,8 @@ background-color: #004226;
 .square-button:hover {
   background-color:#bc865a;
   color:black;
-  transform: scale(1.1); /* Slightly enlarges the button on hover */
+  font-size: 18px;
+  transform: scale(1.0); /* Slightly enlarges the button on hover */
 }
 
 /* Product Section */
@@ -393,6 +384,7 @@ background-color:whitesmoke;
 
   .about-us-section h2 {
     font-size: 2rem;
+    padding: 20px;
   }
 
   .about-us-section p {
@@ -400,31 +392,25 @@ background-color:whitesmoke;
   }
 }
 
-@media (max-width: 480px) {
-  .about-us-section {
-    padding: 40px; 
-  }
-
-  .about-us-section h2 {
-    font-size: 1.5rem; /* Smaller heading size */
-  }
-
-  .about-us-section p {
-    font-size: 16px;
-    
-  }
-}
 
 
 
 
 /* Media Query for Screens Smaller than 768px */
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .hero-section {
     flex-direction: column; 
-    padding: 30px;
+    padding: 10px;
   }
+  .about-us-section {
+    clip-path: none; 
+    padding: 40px;
+  }
+.about-para{
+width: 700px;
+margin-left: -30px;
 
+}
   .left-content,
   .right-content {
     width: 100%; /* Make both sections take full width */
@@ -480,4 +466,58 @@ background-color:whitesmoke;
     display: none;
     opacity: 0; 
   }
+  .about-us-section {
+    clip-path: none; 
+    padding: 40px;
+  }
+.about-para{
+margin-top: -150px;
+padding: 140px;
+margin-left: -150px;
+margin-bottom: -150px;
 }
+}
+
+@media (max-width: 1040px) {
+ 
+  .about-us-section {
+    clip-path: none; 
+    padding: 40px;
+  }
+
+}
+
+/* Media Query for Screens Close to 500px */
+@media (max-width: 800px) and (min-width: 300px) {
+  .about-us-section {
+    clip-path: none; 
+    padding: 30px 20px;
+  }
+  .about-us-section h2 {
+    font-size: 2rem; 
+    margin-left: 20px;
+  }
+  .about-para {
+    width: 100%; /* Take full width */
+    padding: 10px; /* Add padding for better readability */
+    margin-left: 0; /* Align center */
+    text-align: center; /* Center text */
+    margin: 1px;
+  }
+  .about-us-section p {
+    font-size: 16px; /* Adjust paragraph font size */
+    line-height: 1.4; /* Slightly decrease line spacing */
+    margin-bottom: 10px; /* Reduce bottom margin */
+  }
+  .square-button-container {
+    justify-content: center; /* Center the button */
+  }
+  .square-button {
+    width: 130px; /* Reduce button size */
+    height: 35px; /* Adjust button height */
+    font-size: 16px; /* Reduce font size */
+  }
+}
+
+
+/**/

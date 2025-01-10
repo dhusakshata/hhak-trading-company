@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import ScrollToTop from "./Components/Scrolltotop.js";
+import BackToTopButton from './Components/BacktoTop/backtotop.js';
+
 import "./App.css";
 import NavigationBar from './Components/Header/header.js';
 import Home from "./Components/Home/home.js";
@@ -24,7 +26,9 @@ import ProductPage8 from "./Components/Product/Washer-Assembly.js";
 const App = () => {
   return (
     <Router>
+   
       <ScrollToTop />
+      
       <NavigationBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -41,7 +45,9 @@ const App = () => {
         <Route path="/Washer-Assembly" element={<ProductPage8 />} />
         <Route path="/Contact-us" element={<ContactUs />} />
       </Routes>
+    
       <Footer />
+      
     </Router>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import BackToTopButton from '../BacktoTop/backtotop.js';
 
 // Import React Icons
 import { FaPhoneAlt, FaEnvelope, FaTwitter, FaLinkedin, FaMapMarkerAlt, FaHome, FaInfo, FaShoppingCart, FaAddressBook, FaLink,FaUserCircle } from 'react-icons/fa';
@@ -36,7 +37,7 @@ const Footer = () => {
         <h5> REG. OFFICE: 
          </h5>
         <p>
-          Plot No. 11A/1, Gate No. 120,<br />
+          Plot No. 11A/1, Gat No. 120,<br />
           Village Karodi, Bombay Highway,<br />
           Tq. Dist. Aurangabad – 431136.
         </p>
@@ -46,7 +47,7 @@ const Footer = () => {
       <div className="address-item">
         <h5> WAREHOUSE:</h5>
         <p>
-          Plot No. 1, Gate No.48, Near Bharat<br />
+          Plot No. 1, Gat No.48, Near Bharat<br />
           Weight Bridge, Talawade-Chikhali<br />
           Road, Talawade, Pune – 411062.
         </p>
@@ -61,23 +62,11 @@ const Footer = () => {
   </a>
 </div>
 
-</div>
-
-           
-            
+</div>     
           </Col>
           <Col md={4} className="footer-col">
             <h5>Find HHAK Trading Company Here. . . .</h5>
             <div className="map-container">
-           
-            <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.3408509795686!2d75.97098997960751!3d22.900795525780854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396268404cba037f%3A0xbebb1b188659a18!2sMumbai%20-%20Agra%20Rd!5e0!3m2!1sen!2sin!4v1735894501229!5m2!1sen!2sin"
-            title="Register Office Map"
-            loading="lazy"
-            style={{ border: '0', width: '100%', height: '100%' }}
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
            <iframe
             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3779.8547318425663!2d73.79609847489597!3d18.670513664577477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPlot%20No.1%2CGat%20No.48%2C%20Near%20Bharat%20Weight%20Bridge%2C%20Talawade-Chikhali%20Road%2CTalwade%2C%20Pune%20-%20411%20062!5e0!3m2!1sen!2sin!4v1735808820617!5m2!1sen!2sin"
             title="Warehouse Map"
@@ -96,6 +85,7 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
+      <Container> <BackToTopButton/></Container>
     </footer>
   );
 };
