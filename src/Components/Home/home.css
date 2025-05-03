@@ -9,13 +9,14 @@
 }
 .hero-section {
   display: flex;
+  background-attachment: fixed;
   flex-direction: row;
   flex-wrap: wrap; 
   justify-content: space-between;
   align-items: center;
-  padding: 70px;
+  padding: 80px;
   background:radial-gradient(circle, #dddbdb, #464545) !important; 
-
+margin-top: -70px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
   
  
@@ -31,7 +32,7 @@
   display: flex;
   gap: 30px;
   justify-content: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .circle-item {
@@ -135,7 +136,7 @@
 .slideshow {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 600px;
   overflow: hidden;
   display: block; /* Ensure slideshow is visible */
   visibility: visible; /* Make sure it's not hidden */
@@ -164,89 +165,51 @@
   opacity: 0.5; 
   z-index: 1; 
 }
-/* First image (1st child) */
-.slideshow img:nth-child(1) {
-  object-fit: contain;
+/* Larger Image Styling */
+.slide img {
   width: 100%;
-  max-width: 700px !important;
-  height: 450px !important;
-  margin-top: -30px;
+  height: 100%;
+  object-fit: contain; 
 }
 
-/* Second image (2nd child) */
-.slideshow img:nth-child(2) {
-  object-fit: contain;
-  width: 100%;
-  max-width: 700px !important;
-  height: 420px !important;
- 
-}
-
-/* Third image (3rd child) */
-.slideshow img:nth-child(3) {
-  object-fit: contain;
-  width: 90%;
-}
-
-/* Add more styles for other nth-child as needed */
-.slideshow img:nth-child(4) {
-  object-fit: contain;
-  width: 100%;
-  max-width: 700px !important;
-  height: 420px !important;
-}
-.slideshow img:nth-child(5) {
-  object-fit: contain;
-  width: 100%;
-  max-width: 700px !important;
-  height: 420px !important;
-}
-.slideshow img:nth-child(6) {
-  object-fit: contain;
-  width: 100%;
-  max-width: 700px !important;
-  height: 420px !important;
-}
-
-.slideshow img:nth-child(7) {
-  object-fit: contain;
- 
-  width: 900px !important;
-  height: 600px !important;
-  margin-top: -100px !important;
-  margin-left: -50px !important;
-}
-.slideshow img:nth-child(8) {
-  object-fit: contain;
-  width: 100%;
-  max-width: 700px !important;
-  height: 420px !important;
-}
 
 /* About Section */
 .triangle-div {
   /* background-color: #bc865a; */
-  background:radial-gradient(circle, #ffe9d8, #bc865a) !important; 
+  /* background:radial-gradient(circle, #ffe9d8, #bc865a) !important; 
+ height: 100vh; */
 
+ height: 100vh;
+ background-image: url('../../Images/about4.jpg');
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ color: white;
+ position: relative;
 }
 
 .about-us-section {
-  position: relative;
+  height: 100vh;
   overflow: hidden;
-  padding: 60px 50px; 
-  background: #f9f9f9; 
+  padding: 90px 50px; 
+  /* background: #f9f9f9;  */
   position: relative;
-  clip-path: polygon(0% 0%, 75% 10%, 100% 150%, 0% 100%, 0% 0%); 
+  /* clip-path: polygon(0% 0%, 75% 15%, 100% 150%, 0% 100%, 0% 0%);  */
 }
 
-.about-us-section h2 {
+.about-us-section h1 {
 
-  font-size: 2rem; 
-  color: black ; /* Dark color */
+  font-size: 3rem; 
+  color: black ; 
   font-weight: bold;
-  padding: 10px;
-  margin-top: -25px;
-  margin-left: 40px;
+  padding: 20px;
+  margin-top: -35px;
+ 
  
 }
 .about-para{
@@ -255,24 +218,33 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
-width: 700px;
-margin-left: 40px;
+width: 1000px;
 
+
+}
+
+.about-para {
+  background-color: rgba(0, 0, 0, 0.6); /* black with 60% opacity */
+  padding: 50px;
+  border-radius: 10px;
+  margin: 20px auto;
+  
 }
 
 .about-us-section p {
   font-size: 16px;
-  color: black;
-  line-height: 1.6; 
+  color:white;
+  line-height: 1.8; 
   margin-bottom: 20px; 
   text-align: justify; 
+  
 }
 
 .about-us-section hr {
-  width: 50%; 
+  width: 100%; 
   border: none; 
   height: 3px;
-  background-color: #bc865a;
+  background-color:white;
   margin: 0;
 }
 /* Container for positioning */
@@ -280,12 +252,13 @@ margin-left: 40px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 40px;
+ 
+   
 }
 
 /* Square Button Style */
 .square-button {
-
+font-weight: bold;
   width: 150px;
   height: 40px;
   display: flex;
@@ -295,7 +268,7 @@ margin-left: 40px;
   text-decoration: none;
   font-size: 18px;
   color:white;
-background-color: #004226;
+  background-color: #004226;
   border: 2px solid #004226;
   transition: all 0.3s ease-in-out;
 }
@@ -309,14 +282,14 @@ background-color: #004226;
 }
 
 /* Product Section */
-/* 
-.Product-section {
-background-color:whitesmoke;
  
+.Product-section {
+padding: 20px 0;
+ margin: 10px;
 }
 
 .Product-section h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color:black; 
   font-weight: bold;
   margin-bottom: 20px;
@@ -334,47 +307,137 @@ background-color:whitesmoke;
 
 .product-item {
   text-align: center;
- 
-  border-radius: 10px;
-  padding: 0 50px ;
-  gap: 40px;
+  height: 500px;  /* Adjust this based on the desired height of your product items */
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
 }
 
 .product-item img {
-  background-color: whitesmoke;
-  max-width: 100%;
-  height: 400px;
+  background:radial-gradient(circle, #ffe9d8, #bc865a) !important;
+  width: 100%;
+  object-fit: contain;
   padding: 0 20px;
-
-
+  height: 450px !important;
+border-radius: 10px;
+border: 2px solid white;
 }
 
-.product-item img:hover {
-  transform: scale(1.01);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
 
 .product-description h4 {
   font-size: 1.2em;
   color:black;
   font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: -40px;
+  text-decoration: none;
+  
 }
-
-.product-button {
-  background-color: #bc865a;
-  color: white;
+/* Remove border when the link is clicked */
+.product-link:focus,
+.product-link:active {
+  outline: none;
   border: none;
-  padding: 8px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.product-button:hover {
-  background-color: #a05d4a;
-} */
+/* Optional: Style the product item and make the cursor pointer */
+.product-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Style the image */
+.product-item img {
+
+  width: 350px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Center the product description */
+.product-description h4 {
+  text-align: center !important;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.alpine-tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh !important; /* Full screen height */
+  background: url('../../Images/SFD-COLD-HEADING-DIES.jpg') no-repeat center center/cover;
+  background-attachment: fixed; /* Parallax effect */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.alphine-heading h1 {
+  font-size: 3rem;
+ font-weight: bold;
+ margin-top: -200px;
+ color: black;
+}
+.alphine-para p{
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  padding: 50px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 40px auto;
+  position: relative;
+  z-index: 1;
+  line-height: 1.8;
+}
+
+.alphine-para p {
+  font-size: 16px;
+  max-width: 700px;
+  margin-bottom: 20px;
+  margin-top: -100px;
+ font-weight:bold;
+}
+
+.learn-more {
+  display: inline-block;
+  padding: 10px 20px;
+  /* background: rgba(0, 0, 255, 0.8); Semi-transparent blue */
+  background: rgba(0, 66, 38, 0.8); /* Semi-transparent #004226 */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.learn-more:hover {
+  background: rgba(5, 135, 81, 0.8); /* Semi-transparent #004226 */
+}
+
+.hhak-home-end{
+  position: relative;
+  height: 50vh; /* Adjust height as needed */
+  background-image: url("../../Images/machine6.jpg"); /* Replace with your background image path */
+  background-size: cover; /* Ensure the background covers the section */
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  background-attachment: fixed;
+  overflow: hidden; 
+}
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
@@ -411,19 +474,26 @@ width: 700px;
 margin-left: -30px;
 
 }
+
   .left-content,
   .right-content {
-    width: 100%; /* Make both sections take full width */
+    width: 100%; 
     margin: 0 auto;
   }
   .circle-item {
     width: 120px; /* Reduce width */
     height: 120px; /* Reduce height */
     border-radius: 50%; /* Maintain circular shape */
+    border: 2px solid gray; /* Add border for clarity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px; /* Adjust font size for smaller circles */
+    margin-top: 60px;
   }
   .slideshow {
     width: 100%;
-    height: 400px !important; /* Adjust height dynamically */
+    height: 500px !important; 
     margin-top: 20px; /* Add some spacing between sections */
   }
 
@@ -434,7 +504,15 @@ margin-left: -30px;
     display: none;
     opacity: 0; 
   }
+  .text-content h2 {
+    font-size: 1.8rem; /* Adjust heading size */
+    margin-left: 10px;
+  }
 
+  .text-content h3 {
+    font-size: 2rem; /* Adjust heading size */
+    margin-left: 20px;
+  }
 }
 
 /* Media Query for Screens Smaller than 480px */
@@ -442,16 +520,16 @@ margin-left: -30px;
   .hero-section {
     flex-direction: column;
     padding: 20px;
+   
   }
 
-  .left-content {
-    margin-bottom: 20px; /* Add space between left and right content */
-  }
+ 
   .circle-item {
     width: 100px; /* Adjust width for very small screens */
     height: 100px; 
     border-radius: 50%; 
     font-size: 14px;
+    margin-top: 50px;
   }
   .slideshow {
     width: 100%;
@@ -521,3 +599,187 @@ margin-bottom: -150px;
 
 
 /**/
+@media (min-width: 780px) and (max-width: 980px) {
+  /* Hero Section */
+  .hero-section {
+    flex-direction: column !important; 
+    padding: 40px 20px; /* Reduce padding for smaller screens */
+    align-items: center; /* Center align items */
+  }
+
+  .left-content {
+    margin-right: 0; /* Remove unnecessary right margin */
+    text-align: center; /* Center-align text content */
+    margin-bottom: 20px; /* Add spacing below */
+  }
+
+  .feature-circle {
+    gap: 15px; /* Reduce gap between circles */
+    justify-content: center; /* Center-align circles */
+    margin-bottom: 30px; /* Reduce bottom margin */
+  }
+
+  .circle-item {
+    margin-top: 30px;
+    width: 140px; /* Adjust circle size */
+    height: 140px;
+    font-size: 14px; /* Adjust font size inside circles */
+  }
+
+  .text-content h2 {
+    font-size: 1.6rem; /* Reduce heading size */
+    margin: 0 auto;
+  }
+
+  .text-content h3 {
+    font-size: 2rem; /* Adjust heading size */
+    margin: 10px auto;
+  }
+
+  /* Slideshow */
+  .right-content {
+    width: 100%; /* Full-width for slideshow */
+    margin: 20px 0; /* Add spacing above/below */
+  }
+
+  .slideshow {
+    height: 400px; /* Adjust height for smaller screens */
+    overflow: hidden;
+  }
+
+  /* About Section */
+  .about-us-section {
+    padding: 40px 30px; /* Adjust padding for better spacing */
+    clip-path: none; /* Remove clip-path */
+    text-align: center; /* Center-align text */
+  }
+
+  .about-us-section h2 {
+    font-size: 1.8rem; /* Adjust heading size */
+    margin-bottom: 20px;
+  }
+
+  .about-para {
+    width: 90%; /* Take up most of the screen width */
+    margin: 0 auto; /* Center-align content */
+  }
+
+  .about-us-section p {
+    font-size: 14px; /* Reduce paragraph font size */
+    line-height: 1.5;
+  }
+
+  .square-button-container {
+    justify-content: center; /* Center-align button */
+    margin-top: 20px;
+  }
+
+  .square-button {
+    width: 130px; /* Reduce button size */
+    height: 36px;
+    font-size: 14px;
+  }
+
+  /* Product Section */
+  .Product-section {
+    padding: 20px;
+  }
+
+  .product-item {
+    height: 400px; /* Adjust product item height */
+    margin-bottom: 20px; /* Add spacing between items */
+  }
+
+  .product-item img {
+    width: 280px; /* Reduce image size */
+    height: auto;
+  }
+
+  .product-description h4 {
+    font-size: 14px; /* Reduce font size */
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1300px) {
+  /* Hero Section */
+  .hero-section {
+    flex-direction: row; /* Keep row layout */
+    padding: 40px; /* Adjust padding */
+  }
+
+  .left-content {
+    margin-right: 20px; /* Reduce margin for better spacing */
+  }
+
+  .feature-circle {
+    gap: 20px; /* Adjust spacing between circles */
+    margin-bottom: 40px; /* Reduce bottom margin */
+  }
+
+  .circle-item {
+    width: 150px; /* Adjust circle size */
+    height: 150px;
+    font-size: 16px; /* Adjust font size inside circles */
+  }
+
+  .text-content h2 {
+    font-size: 1.8rem; /* Adjust heading size */
+    margin-left: 10px;
+  }
+
+  .text-content h3 {
+    font-size: 2.2rem; /* Adjust heading size */
+    margin-left: 40px;
+  }
+
+  /* Right Content (Slideshow) */
+  .slideshow {
+    height: 500px; /* Adjust height of slideshow */
+  }
+
+  /* About Section */
+  .about-us-section {
+    padding: 50px 40px; /* Adjust padding */
+    clip-path: none; /* Remove clip-path for this range */
+  }
+
+  .about-us-section h2 {
+    font-size: 2rem; /* Adjust heading size */
+    margin-left: 30px;
+  }
+
+  .about-para {
+    width: 90%; /* Adjust width */
+    margin-left: 5%; /* Center align */
+  }
+
+  .about-us-section p {
+    font-size: 16px; /* Adjust paragraph font size */
+    line-height: 1.5; /* Maintain line height */
+  }
+
+  .square-button-container {
+    justify-content: flex-start;
+  }
+
+  .square-button {
+    width: 140px; /* Slightly reduce button size */
+    height: 38px;
+    font-size: 16px; /* Adjust font size */
+  }
+
+  /* Product Section */
+  .product-item {
+    height: 450px; /* Adjust product item height */
+    padding: 20px;
+  }
+
+  .product-item img {
+    width: 300px; /* Adjust image size */
+    height: auto;
+  }
+
+  .product-description h4 {
+    font-size: 16px; /* Maintain font size */
+  }
+}

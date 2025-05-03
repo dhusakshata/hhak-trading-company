@@ -3,7 +3,7 @@
   position: relative !important;
   bottom: 20px;
   right: 80px;
-  background-color:#095d40 ;
+  background:  linear-gradient(to right, #2c2c32 0%, #232532 100%);
   border: none;
   width: 30px;
   height: 30px;

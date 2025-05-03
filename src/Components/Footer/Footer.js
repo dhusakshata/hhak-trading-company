@@ -5,7 +5,7 @@ import './Footer.css';
 import BackToTopButton from '../BacktoTop/backtotop.js';
 
 // Import React Icons
-import { FaPhoneAlt, FaEnvelope, FaTwitter, FaLinkedin, FaMapMarkerAlt, FaHome, FaInfo, FaShoppingCart, FaAddressBook, FaLink,FaUserCircle } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaTwitter, FaLinkedin, FaMapMarkerAlt, FaHome, FaInfo, FaShoppingCart, FaAddressBook, FaLink,FaUserCircle,FaWhatsapp } from 'react-icons/fa';
 
 
 const Footer = () => {
@@ -16,19 +16,43 @@ const Footer = () => {
           <Col md={4} className="footer-col">
             <h5><FaLink className="icon" />Quick Links</h5>
             <ul>
-              <li><Link to="/"> Home</Link></li>
-              <li><Link to="/about-us">About Us</Link></li>
-              <li><Link to="/products"> Products</Link></li>
-              <li><Link to="/contact-us">Contact Us</Link></li>
+              <li>
+                <Link to="/bolt-former">Bolt Former</Link>
+              </li>
+             
+              <li>
+                <Link to="/nut-former">Nut Former</Link>
+              </li>
+              <li>
+                <Link to="/part-former">Part Former</Link>
+              </li>
+              <li>
+                <Link to="/header-machine">Header Machine</Link>
+              </li>
+              <li>
+                <Link to="/slotting-machine">Slotting Machine</Link>
+              </li>
+              <li>
+                <Link to="/thread-rolling-machine">Thread Rolling Machine</Link>
+              </li>
+              <li>
+                <Link to="/vt-cut-machine">BT Cut Machine</Link>
+              </li>
+              <li>
+                <Link to="/washer-assembly">Washer Assembly Machine</Link>
+              </li>
             </ul>
             <div className="social-media">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-                <FaTwitter className="social-icons" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-                <FaLinkedin className="social-icons" />
-              </a>
-            </div>
+  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+    <FaTwitter className="social-icons" />
+  </a>
+  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+    <FaLinkedin className="social-icons" />
+  </a>
+  <a href="https://wa.me/9922058133" target="_blank" rel="noopener noreferrer" className="social-icon">
+    <FaWhatsapp className="social-icons" />
+  </a>
+</div>
           </Col>
           <Col md={4} className="footer-col">
             <h5>   <FaUserCircle className="icon" /> Contact Us</h5>
@@ -85,7 +109,7 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-      <Container> <BackToTopButton/></Container>
+    <Container> <BackToTopButton/></Container> 
     </footer>
   );
 };

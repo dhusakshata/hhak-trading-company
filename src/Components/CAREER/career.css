@@ -1,0 +1,333 @@
+/* Container Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.contact-us-container {
+  display: flex;
+  flex-direction: column;
+ 
+margin: 0;
+padding: 0;
+}
+
+
+.contact-hero {
+margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;  
+  background: linear-gradient(180deg, #1e202c 0%, #2c2f3f 100%);
+  background-attachment: fixed; 
+  color:white;
+  position: relative; 
+}
+.contact-hero-content {
+
+  background: linear-gradient(180deg, #1e202c 0%, #2c2f3f 100%);
+  background-attachment: fixed; 
+  color:white !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+margin-top: -100px;
+
+  gap: 20px;
+  z-index: 10;
+}
+
+.contact-hero-content::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   background-image: url('../../Images/wave2.avif'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  opacity: 0.3;
+  z-index: -1; 
+}
+
+/* Contact Content Layout */
+.contact-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; 
+  z-index: 2;
+  animation: horizontalUnroll 2s ease-out;
+  animation-fill-mode: forwards; 
+  opacity: 0;
+  overflow: hidden;
+  margin-left: 20px;
+  
+}
+/* Keyframes for the unrolling effect */
+@keyframes horizontalUnroll {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0; 
+  }
+  50% {
+    clip-path: inset(0 50% 0 0); /* Halfway unrolled */
+    opacity: 0.5; /* Partially visible */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* Fully visible */
+    opacity: 1; /* Fully visible */
+  }
+}
+/* Vertical Line */
+.vertical-line22 {
+  width: 20px;
+  height: 200px;
+  margin-top: -0.8px;
+  background-color: #ffffff; /* White vertical line */
+}
+
+/* Contact Text Styles */
+.career-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  color:white !important;
+  margin-left: 3px !important;
+  
+}
+
+.career-text h2 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: white;
+  
+}
+
+.career-text p {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 800px; /* Ensure the text doesn't stretch too wide */
+}
+
+.scroll-down {
+  margin-top: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.scroll-down span {
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+}
+
+/* Bouncing Arrow Animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+/* Centering for Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .contact-hero-content {
+    margin-top: 0;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Centering for Small Screens (Mobile) */
+@media (max-width: 768px) {
+  .contact-hero {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .contact-hero-content {
+    margin-top: 0;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* Keyframes for sliding in from the left or right */
+@keyframes slideInCenter {
+  0% {
+    transform: translateX(-100%); /* Start off-screen to the left */
+    opacity: 0; /* Initially invisible */
+  }
+  50% {
+    transform: translateX(0); /* Move to its center position */
+    opacity: 1; /* Fade in */
+  }
+  100% {
+    transform: translateX(0); /* Keep it centered */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+
+
+/* Application Section */
+.career-application-section {
+  padding: 80px 20px;
+  background: #f5f7fb;
+  display: flex;
+  justify-content: center;
+}
+
+.career-form-wrapper {
+  background: #ffffff;
+  max-width: 900px;
+  width: 100%;
+  padding: 50px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.form-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1e202c;
+}
+
+.form-subtext {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.career-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.career-form input,
+.career-form textarea {
+  padding: 14px 18px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fdfdfd;
+  transition: border-color 0.3s ease;
+}
+
+.career-form input:focus,
+.career-form textarea:focus {
+  border-color: #ff6a00;
+  outline: none;
+}
+
+.career-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.career-form button {
+  background-color: #ff6a00;
+  color: #fff;
+  padding: 14px 32px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.career-form button:hover {
+  background-color: #e55c00;
+}
+
+.whatsapp-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #25d366;
+  font-size: 1rem;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
+}
+
+
+.why-join-us {
+  background:linear-gradient(to right,  #bc865a 0%,  #f3dac5 100%);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.why-join-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.why-join-us h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #1e202c;
+}
+
+.why-join-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.reason-card {
+  background: #f5f7fb;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+}
+
+.reason-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #ff6a00;
+}

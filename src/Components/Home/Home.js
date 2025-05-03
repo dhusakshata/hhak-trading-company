@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import './home.css';
+import Banner from "./banner.js";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -15,20 +16,20 @@ import { Link } from "react-router-dom";
 
 
 // Import images from the src/assets/images folder
-import product1 from '../../Images/bolt-former/bold-machine-removebg-preview(2).png';
-import product2 from '../../Images/header-machine/automatic-heavy-duty-screw-header-machine-removebg-preview(1).png';
-import product3 from '../../Images/nut-former/nut-former-machine-removebg-preview.png';
-import product4 from '../../Images/part-former/partformer1-removebg-preview.png';
-import product5 from '../../Images/sloting-machine/high-grade-10-inch-slotting-machine-removebg-preview(1).png';
-import product6 from '../../Images/thread-rolling-machine/thread-rolling2.png';
-import product7 from '../../Images/img-removebg-preview.png';
-import product8 from '../../Images/washer-assembly/self-drilling-screw-washer-assembly-machine.png';
+import product1 from '../../Images/bolt-former/bolt-former-removebg-preview.png';
+import product2 from '../../Images/nut-former/nut_former.png';
+import product3 from '../../Images/part-former/Part-former.png';
+import product4 from '../../Images/header-machine/Headermachine.png';
+import product5 from '../../Images/sloting-machine/SLOTTING-MACHINE-removebg-preview(1).png';
+import product6 from '../../Images/thread-rolling-machine/Thread-rolling.png';
+import product7 from '../../Images/vt-cut/BT.png';
+import product8 from '../../Images/washer-assembly/washer-assembly1.png';
 
 const Home = () => {
   // Annimation Aos->
   useEffect(() => {
     AOS.init({
-      duration: 3000, // Animation duration in milliseconds
+      duration: 2000, // Animation duration in milliseconds
       once: true,     // Ensure the animation happens only once
     });
   }, []);//<-
@@ -47,77 +48,49 @@ const Home = () => {
 
 
   // // Product Section
-  // const productDescriptions = [
-  //   "Bolt Making Machine",
-  //   "Automatic Heavy Duty Screw Header Machine",
-  //   "Self Drilling Screw Washer Assembly Machine",
-  //   "Flat Die Thread Rolling Machine",
-  //   "High Grade Slotting Machine",
-  //   "Precision Screw Machine",
-  //   "Advanced Forged Machine",
-  //   "Thread Rolling Machine"
-  // ];
+  const productData = [
+    { name: "BOLT FORMER", image: product1, link: "/Bolt-former" },
+    { name: "NUT FORMER", image: product2, link: "/Nut-former" },
+    { name: "PART FORMER", image: product3, link: "/Part-former" },
+    { name: "HEADER MACHINE", image: product4, link: "/Header-Machine" },
+    { name: "SLOTTING MACHINE", image: product5, link: "/Slotting-machine" },
+    { name: "THREAD ROLLING MACHINE", image: product6, link: "/Threat-rolling-machine" },
+    { name: "BT CUT MACHINE", image: product7, link: "/VT-cut-machine" },
+    { name: "WASHER ASSEMBLY MACHINE", image: product8, link: "/Washer-Assembly" },
+  ];
 
-  // const sliderSettings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 2000,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1200,
-  //       settings: { slidesToShow: 3 },
-  //     },
-  //     {
-  //       breakpoint: 992,
-  //       settings: { slidesToShow: 2 },
-  //     },
-  //     {
-  //       breakpoint: 768,
-  //       settings: { slidesToShow: 1 },
-  //     },
-  //   ],
-  // };
+ const sliderSettings = {
+     dots: true,
+    infinite: true,
+   speed: 500,
+   slidesToShow: 4,
+  slidesToScroll: 1,
+   autoplay: true,
+   autoplaySpeed: 2000,
+  responsive: [
+    {
+     breakpoint: 1200,      settings: { slidesToShow: 3 },
+    },
+    {
+       breakpoint: 992,
+       settings: { slidesToShow: 2 },
+      },
+     {
+       breakpoint: 768,
+        settings: { slidesToShow: 1 },
+       },
+     ],
+   };
 
   return (
     <div className="Home section">
-      <ProductSection2/>
-      <div className="hero-section">
-        {/* Left Section */}
-        <div className="left-content">
-          <div className="feature-circle">
-            <div className="circle-item"><p>Quality <br /> Products</p></div>
-            <div className="circle-item"><p>Advanced<br /> Forged</p></div>
-            <div className="circle-item"><p>Specialized <br />Screws</p></div>
-          </div>
-          <div className="text-content">
-            <h2>Future of Fastener Manufacturing is Here</h2>
-            <h3>Driving Innovation in Sustainable Fastener Manufacturing</h3>
-          </div>
-        </div>
 
-        {/* Right Section */}
-        <div className="right-content">
-          <div className="slideshow">
-            {images.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Slide ${index}`}
-                className={`slide ${currentSlide === index ? "active" : ""}`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-      
+    
+      <Banner/>
       {/* About Us Section */}
       <div className="triangle-div">
         <div className="about-us-section" data-aos="flip-left">
-          <h2>ABOUT US <hr /></h2>
+          <h1>ABOUT US <hr /></h1>
           <div className="about-para">
             <p>
               <h5 style={{ color: "#bc865a", fontWeight: "bold" }}><i>Trusted Fastener Machine Experts with a Commitment to Quality and Precision!</i></h5>
@@ -126,32 +99,33 @@ const Home = () => {
             <p>
             Alpine Tool Tech, a unit of <b><i>HHAK Trading Company</i></b>, is dedicated to producing top-grade carbide and steel tools designed for the cold forging sector. Emphasizing accuracy and long-lasting performance, the company addresses diverse industrial requirements, offering dependable solutions for even the most challenging applications. 
             </p>
-          </div>
-          <div className="square-button-container">
+         
+            <div className="square-button-container">
       <Link to="/about-us" className="square-button">
       More Details...
       </Link>
     </div>
+          </div>
+         
         </div>
       </div>
       
-      {/* Product Section */}
-      {/* <div className="Product-section">
-        <h2>PRODUCTS <hr /></h2>
-        <Slider {...sliderSettings}>
-          {images.map((image, index) => (
-            <div className="product-item" key={index}>
-               <img src={image} alt={productDescriptions[index]} />
-              <div className="product-description">
-            
-                <h4>{productDescriptions[index]}</h4>
-              
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div> */}
-<ProductSection />
+    
+      <ProductSection2/>
+
+      <section className="alpine-tool">
+     <div className="alphine-heading">
+      <h1 style={{textTransform:"uppercase"}} data-aos="fade-down">Alpine Tool Tech</h1>
+     </div>
+      <div className="alphine-para" data-aos="fade-up">
+      <p>Alpine Tool Tech, a distinguished division of HHAK Trading
+Company, is a trusted name in the manufacturing of
+premium-quality carbide and steel tools designed specifically
+for the cold forging industry. </p>
+      </div>
+      <Link to="/Alphine" className="learn-more" data-aos="fade-up">Learn More</Link>
+    </section>
+
 
     </div>
   );

@@ -6,7 +6,7 @@
   position: relative; /* Ensure it can contain pseudo-elements */
 }
 
-.subproduct-page-container::before {
+.subproduct-content::before {
   content: "";
   position: absolute;
   top: 0;
@@ -16,17 +16,17 @@
   background-image: url('../../Images/boltformerbackground.jpg'); 
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   opacity: 0.4;
   z-index: -1; 
   margin: 0;
   padding: 0;
 } 
-
 /* Title Section */
 .subproduct-title-container {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .subproduct-title {
@@ -34,12 +34,13 @@
   font-weight: bold;
   color: black;
   text-transform: uppercase;
-  margin-left: 20px; /* Add margin for proper alignment */
+
 }
 
 /* Content Section */
 .subproduct-content {
   display: flex;
+  height: 100vh;
   flex-direction: row; /* Row layout for larger screens */
   align-items: flex-start; /* Align content to the left */
   gap: 30px;
@@ -52,8 +53,7 @@
 
 .subproduct-details {
   max-width: 60%; /* Adjust content width */
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7); 
+  color: black;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -64,38 +64,38 @@
 .subproduct-description {
   font-size: 16px;
   font-weight: 600;
-  color: white;
+  color: black;
 }
 
 .subproduct-features h2 {
   font-size: 18px;
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
 .subproduct-features ul {
   list-style-type: disc;
   padding-left: 20px;
-  color: white;
+  color: black;
   font-weight: 600;
 }
 
 .subproduct-features ul li {
   font-size: 16px;
-  color: white;
+  color: black;
   font-weight: 600;
 }
 
 /* Applications Section */
 .subproduct-applications h2 {
   font-size: 18px;
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
 .subproduct-applications p {
   font-size: 16px;
-  color: white;
+  color: black;
   font-weight: 600 !important;
 }
 
@@ -161,10 +161,11 @@
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    gap: 15px;
+    gap: 10px;
   }
 
   .subproduct-details {
+    margin-top: -80px;
     padding: 10px;
     max-width: 100%;
   }
@@ -225,4 +226,319 @@
     background-size: cover; /* Ensures the background still covers the entire screen */
     background-position: center center; /* Keeps it centered */
   }
+}
+
+
+
+
+.siliconhero{
+	background-image: url('../../Images/boltformer1.jpg');
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+	padding: 50px 20px;
+  background-attachment: fixed;
+  margin-top: -20px;
+}
+.vertical-line{
+  
+}
+
+.subproduct-herodata{
+  margin-top: 50px;
+}
+.silicon-hero-heading {
+  position: absolute; 
+  top: 90px;
+  left: -80px;
+  width: 50%;
+  padding: 50px; /* Add some space inside */
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  color: white;
+  z-index: 10;
+  flex: 2;
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: bold;
+}
+
+.siliconinfo-section{
+  background-image: url('../../Images/boltformer2.jpg');
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+	padding: 50px 20px;
+  background-attachment: fixed;
+  margin-top: -20px;
+}
+
+
+/* media query for silicon hero section*/
+
+@media (max-width: 1024px) { 
+  .siliconhero {
+    height: 60vh;
+    padding: 40px 15px;
+  }
+
+  .silicon-hero-heading {
+    top: 100px;
+    left: 0;
+    width: 70%;
+    height: 30vh;
+    margin-left: 50px;
+  }
+
+  .subproduct-herodata {
+    margin-top: 10px;
+  }
+
+  .silicon-hero-heading h1 {
+    font-size: 28px;
+  }
+
+  .silicon-hero-heading h2 {
+    font-size: 20px;
+    margin-left: -60px !important;
+  }
+}
+
+@media (max-width: 780px) { /* Mobile */
+  .siliconhero {
+    height: 60vh;
+    padding: 30px 10px;
+   
+  }
+
+  .silicon-hero-heading {
+    top: 30px;
+    left: 0;
+    width: 70%;
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background for readability */
+  }
+
+  .subproduct-herodata {
+    margin-top: 20px;
+  }
+
+  .silicon-hero-heading h1 {
+    font-size: 24px !important;
+   
+   }
+
+  .silicon-hero-heading h2 {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 480px) { /* Small Mobile */
+  .siliconhero {
+    height: 60vh;
+    padding: 20px 5px;
+  }
+
+  .silicon-hero-heading {
+    top: 30px;
+    left: 0;
+    width: 85%;
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background for readability */
+  }
+
+  .subproduct-herodata {
+    margin-top: 40px;
+    margin-left: -40px;
+  }
+
+  .silicon-hero-heading h1 {
+    font-size: 24px !important;
+  }
+
+  .silicon-hero-heading h2 {
+    font-size: 18px !important;
+    margin-left: -150px !important;
+  }
+}
+
+
+
+
+.Product-article {
+  background-image: url('../../Images/boltformerbackground.jpg'); 
+	/*background-image: url('../../Images/hoses5.jpg'); */
+  background-position:50% center !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  position: relative;
+	z-index: 1;
+	color: #000;
+	background-attachment: fixed;
+}
+article .content {
+  position: relative;
+  z-index: 2; 
+}
+@media screen and (min-width: 700px) {
+  
+	.silicon-card {
+		background:white;
+		width: calc( 50% + 1px);
+		height: 100vh;
+		margin: 0 0 0 0;
+    padding: 30px 20px;
+		position: sticky;
+		top: 0;
+		overflow: hidden;
+   z-index: 1000;
+
+			}
+	
+			.silicon-card:nth-of-type(2n)::after {
+		right: 45%;
+		left: 5vmin;
+	}
+			.silicon-card:nth-of-type(1) {
+		margin: 0 0 0 0;
+		width: 50%;
+			}
+			.silicon-card:nth-of-type(2n) {
+		margin: 0 0 0 auto;
+		
+			}
+     
+}
+
+
+/* For mobile view*/
+@media screen and (max-width: 700px) {
+  
+	.silicon-card {
+		background:white;
+		width: calc( 50% + 1px);
+		height: 100vh;
+		margin: 0 0 0 0;
+		position: sticky;
+		top: 0;
+		overflow: hidden;
+z-index: 1000;
+
+		
+	
+			}
+	
+			.silicon-card:nth-of-type(2n)::after {
+		right: 45%;
+		left: 5vmin;
+	}
+			.silicon-card:nth-of-type(1) {
+		margin: 0 0 0 0;
+		width: 50%;
+			}
+			.silicon-card:nth-of-type(2n) {
+		margin: 0 0 0 auto;
+		
+			}
+      .product-content p{
+        font-size: 14px !important;
+        margin: 60px;
+        line-height: 1.4;
+        text-align: left;
+      margin-top: -80px;
+      }
+      .product-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 300px;
+        height: 200px;
+        padding: 60px 30px;
+        margin-top: 200px;
+      
+        }
+       
+}
+
+@media screen and (max-width: 480px) {
+  
+	.silicon-card {
+		background:white;
+		width: calc( 50% + 1px);
+		height: 100vh !important;
+		margin: 0 0 0 0;
+		position: sticky;
+		top: 0;
+		overflow: hidden;
+z-index: 1000;
+	
+			}
+	
+			.silicon-card:nth-of-type(2n)::after {
+		right: 45%;
+		left: 5vmin;
+	}
+			.silicon-card:nth-of-type(1) {
+		margin: 0 0 0 0;
+		width: 50%;
+			}
+			.silicon-card:nth-of-type(2n) {
+		margin: 0 0 0 auto;
+		
+			}
+      
+      .product-content p{
+
+        font-size: 12px !important;
+        margin: 60px;
+        line-height: 1.4;
+        text-align: left;
+      margin-top: -80px;
+      }
+      .product-content2 p{
+
+        font-size: 12px !important;
+        margin: 60px;
+        line-height: 1.4;
+        text-align: left;
+      margin-top: -80px;
+      }
+      .product-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       width: 300px;
+        height: 200px;
+        margin-top: 160px !important;
+
+        }
+        .epdm-image img{
+          
+         
+          margin-top: -160px !important; 
+          margin-left: -100px !important;
+        }
+       .product-content2 p{
+        width: 200px !important;
+       }
 }

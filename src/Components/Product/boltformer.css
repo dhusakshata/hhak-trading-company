@@ -1,0 +1,859 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3{
+  font-weight: bold;
+}
+.features-section {
+  /* background:linear-gradient(to right,  #bc865a 0%,  #f3dac5 100%); */
+  border-radius: 15px;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ padding: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.feature-row:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.feature-title {
+  flex: 1;
+  font-size: 16px !important;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  text-align: left;
+  padding: 10px 40px;
+}
+
+.feature-points {
+  flex: 2;
+  list-style: none;
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #fff;
+  text-align: left;
+}
+
+.siliconhero{
+	background-image: url('../../Images/boltformer1.jpg');
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+	padding: 50px 20px;
+  background-attachment: fixed;
+  margin-top: -20px;
+}
+.headermachine-hero{
+  background-image: url('../../Images/herderbg.jpg');
+}
+.nutformer-hero{
+  background-image: url('../../Images/nutformerbg11.jpg');
+}
+.partformer-hero{
+  background-image: url('../../Images/partformer12.jpg');
+}
+.Slottingmachine-hero{
+  background-image: url('../../Images/slotting-cutter4.jpg');
+ 
+  
+}
+.thread-rolling-hero{
+  background-image: url('../../Images/flatdie-thread-roll-machine.jpg');
+  background-size: cover;
+ 
+}
+
+.BtCut-hero{ 
+   background-image: url('../../Images/btimage.jpeg');
+  
+}
+.WasherAssembly-hero{ 
+  background-image: url('../../Images/washerAssembly.jpg');
+ 
+}
+.subproduct-herodata{
+  margin-top: -150px !important;
+  margin-left: -50px;
+}
+.subproduct-herodata h1{
+
+  font-weight: bold;
+}
+
+.silicon-hero-heading {
+  position: absolute; 
+  top: 90px;
+  left: -80px;
+  width: 50%;
+  height: 50%;
+  padding: 20px; /* Add some space inside */
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  color: white;
+  z-index: 10;
+  margin-top: -20px;
+  flex: 2;
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  
+}
+.subvertical-line {
+  margin-top: -80px !important;
+  width: 15px;
+  height: 150px;
+  background-color: white;
+  margin-left: 20px;
+}
+
+
+
+
+/* media query for silicon hero section*/
+
+@media (max-width: 1024px) { 
+  .siliconhero {
+    height: 60vh;
+    padding: 40px 15px;
+  }
+
+  .silicon-hero-heading {
+    top: 100px;
+    left: 0;
+    width: 70%;
+    height: 30vh;
+    margin-left: 50px;
+  }
+
+  .subproduct-herodata {
+    margin-top: 10px;
+  }
+
+  .silicon-hero-heading h1 {
+    font-size: 28px;
+  }
+
+  .silicon-hero-heading h2 {
+    font-size: 20px;
+    margin-left: -60px !important;
+  }
+}
+
+@media (max-width: 780px) { /* Mobile */
+  .siliconhero {
+    height: 60vh;
+    padding: 30px 10px;
+   
+  }
+
+  .silicon-hero-heading {
+    top: 30px;
+    left: 0;
+    width: 70%;
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background for readability */
+  }
+
+  .subproduct-herodata {
+    margin-top: 20px;
+  }
+
+  .silicon-hero-heading h1 {
+    font-size: 24px !important;
+   
+   }
+
+  .silicon-hero-heading h2 {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 480px) { /* Small Mobile */
+  .siliconhero {
+    height: 60vh;
+    padding: 20px 5px;
+  }
+
+  .silicon-hero-heading {
+    top: 30px;
+    left: 0;
+    width: 85%;
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background for readability */
+  }
+
+  .subproduct-herodata {
+    margin-top: 40px;
+    margin-left: -40px;
+  }
+
+  .silicon-hero-heading h1 {
+    font-size: 24px !important;
+  }
+
+  .silicon-hero-heading h2 {
+    font-size: 18px !important;
+    margin-left: -150px !important;
+  }
+}
+
+/**/
+.siliconproduct-section {
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -8px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -1; 
+}
+
+.product-content p{
+  text-align: left;
+	font-size: 16px;
+	line-height: 1.8;
+}
+.bolt-image{
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+  object-fit: contain;
+  visibility: visible;
+  margin-top: 20px; /* Add margin above the image */
+  align-self: center; /* Center the image */
+  margin-left: 20px;
+
+}
+.BT-image{
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+  object-fit: contain;
+  visibility: visible;
+  margin-top: 20px; /* Add margin above the image */
+  align-self: center; /* Center the image */
+  margin-left: 20px;
+}
+  
+
+.product-content {
+  width: 100%;
+  text-align: left;
+  padding:  50px;
+margin-top: -80px;
+line-height: 1.8;
+  
+}
+
+
+
+
+.siliconinfo-section {
+  height: 100vh;
+  background-image: url('../../Images/boltformer2.jpg');
+	background-color: linear-gradient(180deg, #1e202c 0%, #2c2f3f 100%);
+	background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.bolt-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two images per row */
+  gap: 20px;
+  padding: 40px;
+
+  color:black;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.grid-item {
+ 
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.grid-item h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.grid-item p {
+  color:black;
+  font-size: 16px;
+}
+
+.bullet-list {
+  text-align: left;
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.bullet-list li {
+  color: black;
+  font-size: 14px;
+  list-style-type: square;
+  margin-bottom: 5px;
+}
+
+/* Responsive: 1 column on smaller screens */
+@media (max-width: 768px) {
+  .bolt-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.nut-article{
+  background-image: url('../../Images/nuts2-removebg-preview.png') !important; 
+  background-position:50% center !important;
+  background-repeat: repeat !important;
+  background-size: contain !important;
+}
+.part-article{
+  background-image: url('../../Images/cold_forging_parts_auto.jpg') !important; 
+  background-position:50% center !important;
+  background-repeat: repeat !important;
+  background-size: cover !important;
+}
+.header-article{
+  background-image: url('../../Images/coldheader.png') !important; 
+  background-position:50% center !important;
+  background-repeat: repeat !important;
+  background-size: cover !important;
+}
+.slotting-article{
+  background-image: url('../../Images/slotting-finished-product.jpg') !important;
+}
+.thread-article{
+  background-image: url('../../Images/nuts-01.jpg') !important;
+}
+.bt-article{
+  background-image: url('../../Images/bt-product.webp') !important;
+  background-position:50% center !important;
+  background-repeat: repeat !important;
+  background-size: cover !important;
+}
+.washer-article{
+  background-image: url('../../Images/washer.webp') !important;
+  background-position:50% center !important;
+  background-repeat: repeat !important;
+  background-size: contain !important;
+}
+/**/
+ .Nutformerinfo{
+  background-image: url('../../Images/nut-former-machines.webp');
+  background-size: cover;
+} 
+
+.partformer-info{
+  background-image: url('../../Images/partformer11.jpg') !important;
+  background-size: contain;
+}
+.quick-tooling-section {
+ 
+  color: black;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.partcontent {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.partcontent p {
+  font-size: 16px;
+  color: black;
+  line-height: 1.6;
+}
+
+.bolt-content{
+  width:100%;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .content-wrapper {
+    flex-direction: row;
+    align-items: start;
+  }
+}
+
+
+
+.header-machine-info{
+  background-image: url('../../Images/cold-heading.jpg');
+ 
+}
+.slottingmachine-info{
+  background-image: url('../../Images/slotting-cutter2.jpg');
+  
+}
+
+
+.slotting-dubblecutter-info {
+
+  padding: 40px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  gap: 20px; /* Space between images */
+  align-items: center; /* Center images */
+}
+
+.image-container img {
+  width: 80%; /* Each image takes 50% width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  object-fit: cover; /* Ensures proper fit */
+}
+
+.heading-with-line {
+  font-size: 20px;
+  margin-left: 150px;
+  display: inline-block;
+  position: relative;
+  padding-right: 20px; /* Space before line starts */
+  text-transform: uppercase;
+}
+
+.heading-with-line::after {
+  content: "";
+  display: inline-block;
+  width:730px; /* Adjust line length */
+  height: 2px;
+  background-color: #bc865a; /* Adjust color to match your theme */
+  margin-left: 10px; /* Space between text and line */
+  margin-top: 10px;
+  vertical-align: middle;
+}
+.heading-with-gripline{
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+}
+
+.heading-with-gripline::after {
+  content: "";
+  display: inline-block;
+  width:930px; /* Adjust line length */
+  height: 2px;
+  background-color: #bc865a; /* Adjust color to match your theme */
+  margin-left: 10px; /* Space between text and line */
+  margin-top: 10px;
+  vertical-align: middle;
+}
+.electric::after{
+  content: "";
+  display: inline-block;
+  width:600px; /* Adjust line length */
+  height: 2px;
+  background-color: #bc865a; /* Adjust color to match your theme */
+  margin-left: 10px; /* Space between text and line */
+  margin-top: 10px;
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .image-container img {
+    width: 80%; /* Adjust width for small screens */
+  }
+}
+
+
+.workpiece-gripper {
+  display: flex;
+  flex-direction: column;
+ 
+
+  padding: 20px;
+ 
+}
+.gripper-image{
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.workpiece-gripper img {
+  width: 50%; /* Adjust image width */
+  height: 700px; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Rounded corners */
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .workpiece-gripper img {
+    width: 80%; /* Adjust for smaller screens */
+  }
+}
+
+
+
+.threadrolling-info{
+  background-image: url('../../Images/threadrollingbg.jpg');
+  
+}
+.product-kinds-section {
+  padding: 20px;
+ 
+  color: black;
+}
+
+.content-container {
+ 
+}
+
+.text-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  margin: 20px;
+}
+
+
+
+
+/**/
+.washerAssembly-info{
+  background-image: url('../../Images/washerbg2.jpg');
+ 
+}
+.info-right h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.info-right p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.Product-article {
+  background-image: url('../../Images/machine6.jpg');
+	/*background-image: url('../../Images/hoses5.jpg'); */
+  background-position:50% center !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  position: relative;
+	z-index: 1;
+	color: #000;
+	background-attachment: fixed;
+}
+article .content {
+  position: relative;
+  z-index: 2; 
+}
+@media screen and (min-width: 700px) {
+  
+	.silicon-card {
+		background:white;
+		width: calc( 50% + 1px);
+		height: 100vh;
+		margin: 0 0 0 0;
+    padding: 30px 20px;
+		position: sticky;
+		top: 0;
+		overflow: hidden;
+   z-index: 1000;
+
+			}
+	
+			.silicon-card:nth-of-type(2n)::after {
+		right: 45%;
+		left: 5vmin;
+	}
+			.silicon-card:nth-of-type(1) {
+		margin: 0 0 0 0;
+		width: 50%;
+			}
+			.silicon-card:nth-of-type(2n) {
+		margin: 0 0 0 auto;
+		
+			}
+      .silicon-card:nth-of-type(3) {
+        margin: 0 0 0 0;
+        width: 100%;
+     
+          }
+          .silicon-card:nth-of-type(4) {
+            margin: 0 0 0 0;
+            width: 100%;
+         
+              }
+     
+}
+
+
+/* For mobile view*/
+@media screen and (max-width: 700px) {
+  
+	.silicon-card {
+		background:white;
+		width: calc( 100% + 1px);
+		height: 100vh;
+		margin: 0 0 0 0;
+		position: sticky;
+		top: 0;
+		overflow: hidden;
+z-index: 1000;
+
+		
+	
+			}
+	
+			.silicon-card:nth-of-type(2n)::after {
+		right: 50%;
+		left: 5vmin;
+	}
+			.silicon-card:nth-of-type(1) {
+		margin: 0 0 0 0;
+		width: 100% !important;
+   
+			}
+			.silicon-card:nth-of-type(2n) {
+		margin: 0 0 0 auto;
+		width: 100%;
+			}
+      .product-content p{
+        font-size: 14px !important;
+        margin: 60px;
+        line-height: 1.4;
+        text-align: left;
+      margin-top: -80px;
+      }
+      .product-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 300px;
+        height: 200px;
+        padding: 60px 30px;
+        margin-top: 200px;
+      
+        }
+       .boltformerinfo{
+        height: 100vh;
+        background-size: cover;
+       }
+}
+
+@media screen and (max-width: 480px) {
+  
+	.silicon-card {
+		background:white;
+		width: calc( 50% + 1px);
+		height: 100vh !important;
+		margin: 0 0 0 0;
+		position: sticky;
+		top: 0;
+		overflow: hidden;
+z-index: 1000;
+	
+			}
+	
+			.silicon-card:nth-of-type(2n)::after {
+		right: 45%;
+		left: 5vmin;
+	}
+			.silicon-card:nth-of-type(1) {
+		margin: 0 0 0 0;
+		width: 50%;
+    height: 40vh !important;
+			}
+			.silicon-card:nth-of-type(2n) {
+		margin: 0 0 0 auto;
+    height: 70vh !important;
+			}
+      
+      .product-content p{
+
+        font-size: 12px !important;
+        margin: 60px;
+        line-height: 1.6;
+        text-align: left;
+      margin-top: -80px;
+      }
+      .bolty{
+        margin-top: -200px !important;
+        width: 100% !important;
+
+      }
+      .product-content2 p{
+
+        font-size: 12px !important;
+        margin: 60px;
+        line-height: 1.4;
+        text-align: left;
+      margin-top: -80px;
+      }
+      .product-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  max-width: 100%;
+        margin-top: 160px !important;
+
+        }
+.bolt-image1{
+  margin-top: 8%;
+  width: 400px !important;
+}
+        .epdm-image img{
+          
+          margin-top: -160px !important; 
+          margin-left: -100px !important;
+        }
+       .product-content2 p{
+        width: 200px !important;
+       }
+       .products-images{
+        margin-top: -360px !important;
+        margin-left: 50px !important;
+       }
+}
+/* Background Section */
+.background-section {
+  position: relative;
+  height: 100vh; /* Adjust height as needed */
+  background-image: url("../../Images/machine2.jpeg"); /* Replace with your background image path */
+  background-size: cover; /* Ensure the background covers the section */
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  background-attachment: fixed;
+  overflow: hidden; /* Ensure no extra content spills outside */
+}
+
+
+@media screen and (min-width: 700px) {
+  
+	.silicon-card {
+		background:white;
+		width: calc( 50% + 1px);
+		height: 100vh;
+		margin: 0 0 0 0;
+    padding: 30px 20px;
+		position: sticky;
+		top: 0;
+		overflow: hidden;
+   z-index: 1000;
+
+			}
+	
+			.silicon-card:nth-of-type(2n)::after {
+		right: 45%;
+		left: 5vmin;
+	}
+			.silicon-card:nth-of-type(1) {
+		margin: 0 0 0 0;
+		width: 50%;
+			}
+			.silicon-card:nth-of-type(2n) {
+		margin: 0 0 0 auto;
+    background:linear-gradient(to right,  #bc865a 0%,  #f3dac5 100%);
+  border-radius: 15px;
+  color:black;
+	
+			}
+      .silicon-card:nth-of-type(3n) {
+        margin: 0 0 0 auto;
+      	width: 50% !important;
+        background:linear-gradient(to right, #050215 0%, #2b3034 100%);
+  border-radius: 15px;
+  color: #fff;
+          }
+          .silicon-card:nth-of-type(4n) {
+            margin: 0 0 0 auto;
+            width: 100% !important;
+            background:linear-gradient(to right,white 0%, white 100%);
+      border-radius: 15px;
+      color: #fff;
+    
+              }
+              .silicon-card:nth-of-type(5n) {
+                margin: 0 0 0 auto;
+                width: 100% !important;
+                height: 100vh;
+                background:linear-gradient(to right,white 0%, white 100%);
+          border-radius: 15px;
+          color: #fff;
+        
+                  }
+     
+}

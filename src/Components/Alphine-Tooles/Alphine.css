@@ -1,0 +1,105 @@
+.alpine-tool-page {
+
+}
+
+/* Hero Section */
+.alpine-hero {
+  background: url("../../Images/SFD-COLD-HEADING-DIES.jpg") center/cover fixed no-repeat;
+  
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: -20px;
+}
+.alphineoverlay{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+.alphineoverlay h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  margin-top: -130px;
+  display: inline-block;
+  animation: horizontalUnroll 2s ease-out;
+  animation-fill-mode: forwards; 
+  opacity: 0;
+  overflow: hidden;
+}
+
+.alphineoverlay p {
+  font-size: 2rem;
+  margin-top: -10px;
+  color: white;
+
+  animation: unrollRightToLeft 2s ease-out;
+  animation-fill-mode: forwards; 
+  opacity: 0;
+  overflow: hidden; 
+}
+
+/* Info Section */
+.alpine-info {
+  /* background: url("../../Images/banner10.jpg") center/cover fixed no-repeat; */
+  background-color: #2c2f3a;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+}
+
+.alpine-info p {
+  color:white;
+  width: 1000px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Grid Gallery */
+.alpine-gallery {
+  padding: 40px;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.grid-item img{
+width: 500px;
+  
+}
+  
+.alpine-article{
+  background-image: url('../../Images/carbide.jpg') !important; 
+	/*background-image: url('../../Images/hoses5.jpg'); */
+  background-position:50% center !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  position: relative;
+	z-index: 1;
+	color: #000;
+	background-attachment: fixed;
+}
+

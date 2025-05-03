@@ -1,0 +1,37 @@
+
+
+/* Breaking News Ticker */
+.ticker-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background:linear-gradient(to right, #000000 0%, #000000 100%) !important;
+  color: white;
+  text-align: center;
+  padding: 10px 20px -10px 20px;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+.ticker-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: ticker 10s linear infinite;
+  font-size: 1.2rem;
+  color:#bc865a;
+}
+
+.ticker-text:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

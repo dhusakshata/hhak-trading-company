@@ -8,16 +8,163 @@
 margin: 0;
 padding: 0;
 }
-.contact-us-container h1 {
-  font-size: 2.5rem;
-  color: black;
+
+
+.contact-hero {
+margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;  
+  background: linear-gradient(180deg, #1e202c 0%, #2c2f3f 100%);
+  background-attachment: fixed; 
+  color:white;
+  position: relative; 
+}
+.contact-hero-content {
+
+  background: linear-gradient(180deg, #1e202c 0%, #2c2f3f 100%);
+  background-attachment: fixed; 
+  color:white !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+margin-top: -100px;
+margin-left: -200px;
+  gap: 20px;
+  z-index: 10;
+}
+
+.contact-hero-content::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   background-image: url('../../Images/wave2.avif'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  opacity: 0.3;
+  z-index: -1; 
+}
+
+/* Contact Content Layout */
+.contact-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; 
+  z-index: 2;
+  animation: horizontalUnroll 2s ease-out;
+  animation-fill-mode: forwards; 
+  opacity: 0;
+  overflow: hidden;
+  
+}
+/* Keyframes for the unrolling effect */
+@keyframes horizontalUnroll {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0; 
+  }
+  50% {
+    clip-path: inset(0 50% 0 0); /* Halfway unrolled */
+    opacity: 0.5; /* Partially visible */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* Fully visible */
+    opacity: 1; /* Fully visible */
+  }
+}
+/* Vertical Line */
+.vertical-line22 {
+  width: 20px;
+  height: 200px;
+  margin-top: -0.8px;
+  background-color: #ffffff; /* White vertical line */
+}
+
+/* Contact Text Styles */
+.contact-text h1 {
+  font-size: 3rem;
   font-weight: bold;
-  text-align: center;
-  padding: 30px;
-  text-transform: uppercase;
-  position: relative;
-  opacity: 0; 
-  animation: slideInCenter 3s ease-out forwards;
+  margin: 0;
+  color:white !important;
+ 
+}
+
+.contact-text h2 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contact-text p {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 800px; /* Ensure the text doesn't stretch too wide */
+}
+
+.scroll-down {
+  margin-top: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.scroll-down span {
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+}
+
+/* Bouncing Arrow Animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+/* Centering for Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .contact-hero-content {
+    margin-top: 0;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Centering for Small Screens (Mobile) */
+@media (max-width: 768px) {
+  .contact-hero {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .contact-hero-content {
+    margin-top: 0;
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
 }
 
 /* Keyframes for sliding in from the left or right */
@@ -37,23 +184,31 @@ padding: 0;
 }
 
 .contact-details {
+  background-image: url('../../Images/getintouch.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   display: flex;
   flex-direction: row; 
   gap: 20px;
   justify-content: space-between;
   width: 100%; 
-  margin-top: -30px;
+ 
 
 }
+
+
+
 .left-contact-section{
   flex: 1;
-
+margin-top: 20px;
   padding: 10px;
 }
 /* Right Section */
 .right-contact-section {
   flex: 1;
-
+  margin-top: 20px;
   padding: 10px;
 }
 
@@ -115,11 +270,12 @@ textarea {
 
 /* Submit Button */
 .submit-button {
-  border: 2px solid #007bff;
+
   color:black;
 background-color: #095d40;
   padding: 12px 30px;
   font-size: 1.2rem;
+  font-weight: 500;
   border-radius: 8px;
   cursor: pointer;
   width: 100%;
@@ -128,8 +284,8 @@ background-color: #095d40;
 
 /* Button Hover */
 .submit-button:hover {
-  background-color: #0056b3;
-  color: white;
+  background-color: #bc865a;
+  color: black !important;
   transform: translateY(-2px); /* Slight lift effect */
 }
 
@@ -316,8 +472,8 @@ color: white;
 
 .map {
   position: relative;
-  width: 260px; /* Adjusted size for larger circles */
-  height: 260px; /* Equal to width */
+  width: 400px; /* Adjusted size for larger circles */
+  height: 400px; /* Equal to width */
   overflow: hidden;
   border-radius: 50%;
   border: 2px solid   #bc865a;
@@ -336,8 +492,8 @@ color: white;
 
 
 .map:hover {
-  transform: rotateY(360deg) scale(1.1); /* Rotation and scale animation */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transform: rotateY(360deg) ; /* Rotation and scale animation */
+
 }
 
 @media (max-width: 768px) {
@@ -350,4 +506,60 @@ color: white;
     width: 300px; /* Adjusted size for smaller screens */
     height: 300px;
   }
+}
+
+
+@media (max-width: 480px) {
+  .box-back p {
+    font-size: 14px; /* Smaller font for readability */
+    padding: 5px; /* Reduce padding for smaller screens */
+    line-height: 1.4; /* Adjust line height for better spacing */
+  }
+
+  .box-back {
+    padding: 10px; /* Ensure enough space within the box */
+  }
+
+  .contact-box {
+    width: 200px; /* Reduce the size of the box for smaller screens */
+    height: 120px;
+  }
+}
+
+.contact-end{
+  background-image: url('../../Images/contactbg.avif');
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+	padding: 50px 20px;
+  background-attachment: fixed;
+  margin-top: -20px;
+}
+
+
+.whatsapp-contact {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  font-weight: 500;
+}
+
+.whatsapp-contact a {
+  text-decoration: none;
+  color: #25D366;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.whatsapp-contact a:hover {
+  color: #128c7e;
 }

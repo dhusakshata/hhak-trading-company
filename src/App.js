@@ -8,11 +8,17 @@ import BackToTopButton from './Components/BacktoTop/backtotop.js';
 
 import "./App.css";
 import NavigationBar from './Components/Header/header.js';
+import ExhibitionPage from './Components/Header/Exhibition-page.js';
 import Home from "./Components/Home/home.js";
 import AboutUs from "./Components/AboutUs/About-us.js"
 import Products from "./Components/Product/Products.js";
 import ContactUs from './Components/ContactUs/ContactUs.js';
+import CAREER from './Components/CAREER/career.js';
 import Footer from "./Components/Footer/Footer.js"
+import GetInTouch from "./Components/GetInTouch.js";
+import AlpineTool from './Components/Alphine-Tooles/Alphine.js';
+
+
 
 import ProductPage1 from "./Components/Product/Bolt-former.js";
 import ProductPage2 from "./Components/Product/Header-Machine.js";
@@ -32,9 +38,10 @@ const App = () => {
       <NavigationBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Exhibition-page" element={<ExhibitionPage />} />
         <Route path="/About-us" element={<AboutUs />} />
         <Route path="/Products" element={<Products />} /> 
-
+        <Route path="/Alphine" element={<AlpineTool/>} /> 
         <Route path="/Bolt-former" element={<ProductPage1 />} />
         <Route path="/Header-Machine" element={<ProductPage2 />} />
         <Route path="/Nut-former" element={<ProductPage3 />} />
@@ -44,8 +51,9 @@ const App = () => {
         <Route path="/VT-cut-machine" element={<ProductPage7 />} />
         <Route path="/Washer-Assembly" element={<ProductPage8 />} />
         <Route path="/Contact-us" element={<ContactUs />} />
+        <Route path="/career" element={<CAREER />} />
       </Routes>
-    
+    <GetInTouch/>
       <Footer />
       
     </Router>

@@ -1,18 +1,19 @@
+
+
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./product.css";
 import Breadcrumb from "../BreadCrumbs/Breadcrumbs.js";
 
-import ProductSection2 from "../Home/Productsection2.js";
-
-import image1 from "../../Images/bold-machine-removebg-preview(1).png";
-import image2 from "../../Images/automatic-heavy-duty-screw-header-machine.png";
-import image3 from "../../Images/nut-former/nut-former-machine-removebg-preview.png";
-import image4 from "../../Images/part-former/01cbf-l-500x500-removebg-preview.png";
-import image5 from "../../Images/sloting-machine/high-grade-slotting-machine-removebg-preview(1).png";
-import image6 from "../../Images/thread-rolling-machine/thread-rolling1.png";
-import image7 from "../../Images/vt-cut/die-cutting-machine-vt-series.png";
-import image8 from "../../Images/washer-assembly/self-drilling-screw-washer-assembly-machine.png";
+import image1 from "../../Images/bolt-former/bolt-former-removebg-preview.png";
+import image2 from "../../Images/header-machine/Headermachine.png";
+import image3 from "../../Images/nut-former/nut_former.png";
+import image4 from "../../Images/part-former/Part-former.png";
+import image5 from "../../Images/sloting-machine/SLOTTING-MACHINE-removebg-preview(1).png";
+import image6 from "../../Images/thread-rolling-machine/Thread-rolling.png";
+import image7 from "../../Images/vt-cut/BT.png";
+import image8 from "../../Images/washer-assembly/washer-assembly1.png";
 
 const products = [
   {
@@ -20,8 +21,8 @@ const products = [
     name: "Bolt Former",
     image: image1,
     link: "/bolt-former",
+    
   },
- 
   {
     id: 2,
     name: "Nut Former",
@@ -44,81 +45,89 @@ const products = [
     id: 5,
     name: "Slotting Machine",
     image: image5,
-    link: "/slotting-machine",
+    link: "/Slotting-machine",
   },
   {
     id: 6,
     name: "Thread Rolling Machine",
     image: image6,
-    link: "/thread-rolling-machine",
+    link: "/Threat-rolling-machine",
   },
   {
     id: 7,
     name: "BT Cutting Machine",
     image: image7,
-    link: "/vt-cutting-machine",
+    link: "/VT-cut-machine",
   },
   {
     id: 8,
     name: "Washer Assembly Machine",
     image: image8,
-    link: "/washer-assembly-machine",
+    link: "/Washer-Assembly",
   },
 ];
 
 const ProductPage = () => {
   return (
-    <>
-      <Breadcrumb currentPage="Products" />
 
-      <div className="product-page-container">
-        <h1 className="page-title">PRODUCTS</h1>
-        <div className="product-page">
-          <div className="product-menu">
-            <h4>// PRODUCTS MENU</h4>
-            <ul>
-              <li>
-                <Link to="/bolt-former">Bolt Former</Link>
-              </li>
-             
-              <li>
-                <Link to="/nut-former">Nut Former</Link>
-              </li>
-              <li>
-                <Link to="/part-former">Part Former</Link>
-              </li>
-              <li>
-                <Link to="/header-machine">Header Machine</Link>
-              </li>
-              <li>
-                <Link to="/slotting-machine">Slotting Machine</Link>
-              </li>
-              <li>
-                <Link to="/thread-rolling-machine">Thread Rolling Machine</Link>
-              </li>
-              <li>
-                <Link to="/vt-cutting-machine">BT Cutting Machine</Link>
-              </li>
-              <li>
-                <Link to="/washer-assembly-machine">Washer Assembly Machine</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="product-list">
-            <h4>+ PRODUCTS LIST</h4>
-            <div className="product-grid">
-              {products.map((product) => (
-                <Link to={product.link} key={product.id} className="product-card">
-                  <img src={product.image} alt={product.name} />
-                  <div className="product-name">{product.name}</div>
-                </Link>
-              ))}
+    <div className="product-page-container">
+      <Breadcrumb currentPage="Products" />
+      <section className=" Product-hero" >
+        <div className="Product-hero-content">
+          {/* Left Section */}
+         
+          <div className="Product-hero-heading">
+          <div className="Product-vertical-line">
             </div>
+
+           <div className="product-herodata">
+           <h1 style={{textAlign:"left",marginLeft:"120px"}}>
+           HIGH PERFORMANCE PRODUCTS
+            </h1>
+           <h2  style={{textAlign:"left",margin:"20px", marginLeft:"100px" ,fontWeight:"bold",fontSize:"24px"}}>Flexible Solutions. Lasting Performance.
+            </h2>
+            
+ 
+
+
+           </div>
+          </div>
+
+          
+        </div>
+      </section>
+
+
+    
+      <div className="product-page">
+        <div className="product-list">
+          <h4>+ PRODUCTS LIST</h4>
+          <div className="product-grid">
+            {products.map((product) => (
+              <Link to={product.link} key={product.id} className="product-card">
+                <div className="product-card-inner">
+                  {/* Front Side */}
+                  <div className="product-card-front">
+                    <img src={product.image} alt={product.name} />
+                 
+                  </div>
+                  {/* Back Side */}
+                  <div className="product-card-back">
+                    <div className="product-back-info">
+                      Learn more about....
+                     <div className="Back-name"> {product.name}</div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
-      {/* <ProductSection2/> */}
-    </>
+
+<section className="product-end-section"></section>
+
+    </div>
   );
 };
 
